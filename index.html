@@ -55,8 +55,7 @@
         }
         
         html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
+            scroll-behavior: smooth
         }
         
         body {
@@ -65,15 +64,6 @@
             font-family: 'Inter', sans-serif;
             font-size: 15px;
             line-height: 1.65;
-            -webkit-text-size-adjust: 100%;
-            text-size-adjust: 100%;
-        }
-        
-        button,
-        input,
-        select,
-        textarea {
-            font: inherit;
         }
         
         a {
@@ -83,8 +73,7 @@
         
         img {
             max-width: 100%;
-            display: block;
-            height: auto;
+            display: block
         }
         /* ── NAV ── */
         
@@ -1468,43 +1457,6 @@
             .theme-toggle {
                 display: flex
             }
-            .nav-inner {
-                padding: 0 16px;
-                height: 60px;
-            }
-            .logo {
-                font-size: 1.1rem;
-            }
-            .logo img {
-                height: 28px;
-            }
-            section {
-                padding: 60px 18px;
-            }
-            .hero {
-                padding: 100px 18px 60px;
-                min-height: auto;
-            }
-            .hero-btns {
-                width: 100%;
-            }
-            .hero-btns .btn {
-                flex: 1;
-                justify-content: center;
-                text-align: center;
-            }
-            .coa-inner,
-            .wholesale-inner,
-            .about-inner {
-                gap: 32px;
-            }
-            .modal-dialog {
-                max-height: 94vh;
-            }
-            .disclaimer-bar {
-                padding: 12px 16px;
-                font-size: .84rem;
-            }
         }
         
         @media(max-width:680px) {
@@ -1519,77 +1471,6 @@
                 min-width: unset;
                 width: 100%
             }
-            h1 {
-                font-size: clamp(2rem, 9vw, 2.8rem);
-                max-width: 100%;
-            }
-            .hero-sub {
-                font-size: .95rem;
-                max-width: 100%;
-            }
-            .hero-eyebrow {
-                font-size: .7rem;
-                padding: 5px 12px;
-            }
-            .section-title {
-                font-size: clamp(1.5rem, 6vw, 2rem);
-            }
-            .section-desc {
-                max-width: 100%;
-            }
-            .cat-grid,
-            .why-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-            .prod-img-wrap {
-                padding-top: 72%;
-            }
-            .modal-header {
-                padding: 18px 18px 14px;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            .modal-body {
-                padding: 16px 18px;
-            }
-            .modal-footer {
-                padding: 14px 18px 18px;
-            }
-            .coa-data-row {
-                font-size: .8rem;
-            }
-            .wa-float {
-                width: 50px;
-                height: 50px;
-                bottom: 18px;
-                right: 18px;
-            }
-            .wa-float svg {
-                width: 24px;
-                height: 24px;
-            }
-            .admin-dialog {
-                max-width: 100%;
-                max-height: 95vh;
-                border-radius: 12px;
-            }
-            .admin-body {
-                padding: 16px 18px;
-            }
-            .admin-form-grid {
-                grid-template-columns: 1fr;
-            }
-            .admin-table {
-                min-width: 620px;
-                font-size: .8rem;
-            }
-            .contact-item {
-                flex-wrap: wrap;
-            }
-            .footer-col {
-                padding-top: 10px;
-            }
         }
         
         @media(max-width:480px) {
@@ -1603,696 +1484,208 @@
                 gap: 10px
             }
             .badge {
-                font-size: .7rem;
-                padding: 7px 11px
+                font-size: .75rem;
+                padding: 8px 13px
             }
             .stat-grid {
                 grid-template-columns: 1fr
             }
-            .nav-inner {
-                padding: 0 14px;
-            }
-            .logo span {
-                display: none;
-            }
-            .hero-btns {
-                flex-direction: column;
-            }
-            .btn {
-                padding: 13px 22px;
-                font-size: .88rem;
-            }
-            .prod-name {
-                font-size: .95rem;
-            }
-            .prod-actions {
-                grid-template-columns: 1fr;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-            }
-            .footer-bottom>div:last-child {
-                text-align: left;
-                max-width: 100%;
-            }
-            section {
-                padding: 56px 14px;
-            }
-            .hero {
-                padding: 90px 14px 50px;
-            }
-            .disclaimer-bar {
-                padding: 10px 14px;
-                font-size: .78rem;
-                line-height: 1.5;
-            }
-            .faq-q,
-            .faq-a-inner {
-                font-size: .9rem;
-            }
-            .faq-q {
-                padding: 16px 14px;
-            }
         }
         /* ============================================================
-           ADDITIONAL MOBILE / TABLET POLISH
-           (added on top of existing rules — nothing above is changed)
+           ADMIN — nav link, login modal, dashboard, file picker fields
            ============================================================ */
-        
-        @media(max-width:900px) {
-            .nav-inner {
-                padding: 0 16px;
-                height: 60px;
-            }
-            .logo {
-                font-size: 1.1rem;
-            }
-            .logo img {
-                height: 28px;
-            }
-            section {
-                padding: 60px 18px;
-            }
-            .hero {
-                padding: 100px 18px 60px;
-                min-height: auto;
-            }
-            .hero-btns {
-                width: 100%;
-            }
-            .hero-btns .btn {
-                flex: 1;
-                justify-content: center;
-                text-align: center;
-            }
-            .coa-inner,
-            .wholesale-inner,
-            .about-inner {
-                gap: 32px;
-            }
-            .modal-dialog {
-                max-height: 94vh;
-            }
-        }
-        
-        @media(max-width:680px) {
-            h1 {
-                font-size: clamp(2rem, 9vw, 2.8rem);
-                max-width: 100%;
-            }
-            .hero-sub {
-                font-size: .95rem;
-                max-width: 100%;
-            }
-            .hero-eyebrow {
-                font-size: .7rem;
-                padding: 5px 12px;
-            }
-            .section-title {
-                font-size: clamp(1.5rem, 6vw, 2rem);
-            }
-            .section-desc {
-                max-width: 100%;
-            }
-            .cat-grid,
-            .why-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-            .prod-img-wrap {
-                padding-top: 72%;
-            }
-            .modal-header {
-                padding: 18px 18px 14px;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            .modal-body {
-                padding: 16px 18px;
-            }
-            .modal-footer {
-                padding: 14px 18px 18px;
-            }
-            .coa-data-row {
-                font-size: .8rem;
-            }
-            .wa-float {
-                width: 50px;
-                height: 50px;
-                bottom: 18px;
-                right: 18px;
-            }
-            .wa-float svg {
-                width: 24px;
-                height: 24px;
-            }
-        }
-        
-        @media(max-width:480px) {
-            .nav-inner {
-                padding: 0 14px;
-            }
-            .logo span {
-                display: none;
-            }
-            .hero-btns {
-                flex-direction: column;
-            }
-            .btn {
-                padding: 13px 22px;
-                font-size: .88rem;
-            }
-            .badge {
-                font-size: .7rem;
-                padding: 7px 11px;
-            }
-            .prod-name {
-                font-size: .95rem;
-            }
-            .prod-actions {
-                grid-template-columns: 1fr;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: left;
-            }
-            .footer-bottom>div:last-child {
-                text-align: left;
-                max-width: 100%;
-            }
-        }
-        /* Prevent any element from overflowing the viewport on small screens */
-        
-        @media(max-width:600px) {
-            html,
-            body {
-                overflow-x: hidden;
-            }
-            .section-inner,
-            .hero-inner,
-            .footer-inner {
-                width: 100%;
-            }
-        }
-        /* ============================================================
-           ADMIN — nav link, login modal, dashboard
-           ============================================================ */
-        
-        .nav-admin-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: .85rem;
-            font-weight: 500;
-            color: var(--gray);
-            cursor: pointer;
-            transition: color var(--transition);
-            letter-spacing: .02em;
-            text-transform: uppercase;
-            background: none;
-            border: none;
-            padding: 0;
-            font-family: inherit;
-        }
-        
-        .nav-admin-link:hover {
-            color: var(--gold)
-        }
-        
-        #mobile-menu .mobile-admin-link {
-            cursor: pointer;
-            width: 100%;
-            text-align: left;
-            background: none;
-            border: none;
-            font-family: inherit;
-        }
-        /* Login modal (reuses dark backdrop styling pattern of coa-modal) */
-        
-        #admin-login-modal,
-        #admin-panel {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 9700;
-            background: rgba(5, 12, 22, .92);
-            backdrop-filter: blur(10px);
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity .25s ease;
-        }
-        
-        #admin-login-modal.open,
-        #admin-panel.open {
-            display: flex;
-            opacity: 1
-        }
-        
-        .admin-login-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            width: 100%;
-            max-width: 380px;
-            padding: 34px 30px;
-            animation: modalSlideUp .28s ease both;
-            box-shadow: 0 32px 80px rgba(0, 0, 0, .6), 0 0 0 1px rgba(201, 152, 42, .1);
-            position: relative;
-        }
-        
-        .admin-login-box .modal-close {
-            position: absolute;
-            top: 16px;
-            right: 16px
-        }
-        
-        .admin-login-title {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-bottom: 4px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .admin-login-sub {
-            font-size: .83rem;
-            color: var(--gray);
-            margin-bottom: 24px
-        }
-        
-        .admin-field {
-            margin-bottom: 16px
-        }
-        
-        .admin-field label {
-            display: block;
-            font-size: .75rem;
-            font-weight: 600;
-            letter-spacing: .06em;
-            text-transform: uppercase;
-            color: var(--gray);
-            margin-bottom: 7px;
-        }
-        
-        .admin-field input {
-            width: 100%;
-            padding: 11px 14px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, .04);
-            border: 1px solid rgba(255, 255, 255, .1);
-            color: var(--white);
-            font-size: .92rem;
-            font-family: inherit;
-            transition: border-color .2s;
-        }
-        
-        .admin-field select {
-            width: 100%;
-            padding: 11px 14px;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, .04);
-            border: 1px solid rgba(255, 255, 255, .1);
-            color: var(--white);
-            font-size: .92rem;
-            font-family: inherit;
-            transition: border-color .2s;
-            margin-bottom: 8px;
-        }
-        
-        .admin-field input:focus,
-        .admin-field select:focus {
-            outline: none;
-            border-color: var(--gold)
-        }
-        
-        .admin-field .admin-picker-help {
-            font-size: .72rem;
-            color: var(--gray);
-            margin-top: 6px;
-            line-height: 1.5;
-        }
-        
-        .admin-upload-box {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        
-        .admin-upload-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            padding: 10px 12px;
-            border-radius: 8px;
-            background: rgba(201, 152, 42, .12);
-            border: 1px solid rgba(201, 152, 42, .28);
-            color: var(--gold-lt);
-            font-size: .82rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all .2s;
-        }
-        
-        .admin-upload-btn:hover {
-            background: rgba(201, 152, 42, .2);
-        }
-        
-        .admin-upload-box input[type="file"] {
-            display: none;
-        }
-        
-        .admin-upload-meta {
-            font-size: .72rem;
-            color: var(--gray);
-            line-height: 1.5;
-        }
-        
-        .admin-upload-preview {
-            display: none;
-            max-height: 120px;
-            width: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, .1);
-            background: rgba(255, 255, 255, .04);
-        }
-        
-        .admin-error {
-            font-size: .8rem;
-            color: #f06a6a;
-            margin-bottom: 14px;
-            display: none;
-        }
-        
-        .admin-error.show {
-            display: block
-        }
-        
-        .btn-admin-submit {
-            width: 100%;
-            background: var(--gold);
-            color: var(--navy);
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: .92rem;
-            border: none;
-            cursor: pointer;
-            transition: background .2s;
-        }
-        
-        .btn-admin-submit:hover {
-            background: var(--gold-lt)
-        }
-        
-        .admin-hint {
-            margin-top: 18px;
-            font-size: .72rem;
-            color: var(--gray);
-            text-align: center;
-            line-height: 1.6;
-        }
-        /* Admin dashboard panel */
-        
-        .admin-dialog {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            width: 100%;
-            max-width: 1000px;
-            max-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            animation: modalSlideUp .28s ease both;
-            box-shadow: 0 32px 80px rgba(0, 0, 0, .6), 0 0 0 1px rgba(201, 152, 42, .1);
-        }
-        
-        .admin-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 26px;
-            border-bottom: 1px solid rgba(255, 255, 255, .06);
-            flex-shrink: 0;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .admin-header-title {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .admin-header-actions {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            flex-wrap: wrap
-        }
-        
-        .btn-admin-logout {
-            background: rgba(255, 255, 255, .06);
-            border: 1px solid rgba(255, 255, 255, .1);
-            color: var(--gray);
-            padding: 8px 16px;
-            border-radius: 7px;
-            font-size: .8rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all .2s;
-        }
-        
-        .btn-admin-logout:hover {
-            color: var(--white);
-            border-color: rgba(255, 255, 255, .25)
-        }
-        
-        .btn-admin-add {
-            background: var(--gold);
-            color: var(--navy);
-            padding: 9px 18px;
-            border-radius: 7px;
-            font-size: .82rem;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            transition: background .2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .btn-admin-add:hover {
-            background: var(--gold-lt)
-        }
-        
-        .admin-body {
-            flex: 1;
-            overflow-y: auto;
-            padding: 22px 26px
-        }
-        
-        .admin-table-wrap {
-            overflow-x: auto;
-            border: 1px solid var(--border);
-            border-radius: 10px
-        }
-        
-        .admin-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: .85rem;
-            min-width: 680px
-        }
-        
-        .admin-table th {
-            text-align: left;
-            padding: 12px 16px;
-            background: rgba(201, 152, 42, .07);
-            color: var(--gold);
-            font-weight: 700;
-            font-size: .72rem;
-            letter-spacing: .06em;
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--border);
-            white-space: nowrap;
-        }
-        
-        .admin-table td {
-            padding: 12px 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, .05);
-            vertical-align: middle;
-        }
-        
-        .admin-table tr:last-child td {
-            border-bottom: none
-        }
-        
-        .admin-table-thumb {
-            width: 46px;
-            height: 46px;
-            border-radius: 6px;
-            object-fit: cover;
-            background: rgba(255, 255, 255, .05);
-            flex-shrink: 0;
-        }
-        
-        .admin-row-name {
-            font-weight: 600;
-            color: var(--ice)
-        }
-        
-        .admin-row-actions {
-            display: flex;
-            gap: 8px;
-            white-space: nowrap
-        }
-        
-        .btn-row-edit,
-        .btn-row-delete {
-            padding: 6px 13px;
-            border-radius: 6px;
-            font-size: .74rem;
-            font-weight: 600;
-            cursor: pointer;
-            border: 1px solid;
-            transition: all .2s;
-        }
-        
-        .btn-row-edit {
-            background: rgba(201, 152, 42, .08);
-            border-color: rgba(201, 152, 42, .3);
-            color: var(--gold-lt);
-        }
-        
-        .btn-row-edit:hover {
-            background: rgba(201, 152, 42, .18);
-            color: var(--gold)
-        }
-        
-        .btn-row-delete {
-            background: rgba(240, 106, 106, .08);
-            border-color: rgba(240, 106, 106, .3);
-            color: #f06a6a;
-        }
-        
-        .btn-row-delete:hover {
-            background: rgba(240, 106, 106, .18)
-        }
-        
-        .admin-empty-note {
-            font-size: .8rem;
-            color: var(--gray);
-            margin-top: 14px;
-            line-height: 1.6;
-        }
-        /* Add/Edit product form (shown inline inside admin panel) */
-        
-        #admin-form-wrap {
-            display: none;
-            margin-top: 22px
-        }
-        
-        #admin-form-wrap.show {
-            display: block
-        }
-        
-        .admin-form-title {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 700;
-            font-size: 1.05rem;
-            margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .admin-form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        
-        .admin-form-grid .admin-field {
-            margin-bottom: 0
-        }
-        
-        .admin-form-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 6px;
-            flex-wrap: wrap
-        }
-        
-        .btn-form-save {
-            background: var(--gold);
-            color: var(--navy);
-            padding: 10px 22px;
-            border-radius: 7px;
-            font-weight: 700;
-            font-size: .85rem;
-            border: none;
-            cursor: pointer;
-            transition: background .2s;
-        }
-        
-        .btn-form-save:hover {
-            background: var(--gold-lt)
-        }
-        
-        .btn-form-cancel {
-            background: transparent;
-            color: var(--gray);
-            border: 1px solid rgba(255, 255, 255, .1);
-            padding: 10px 22px;
-            border-radius: 7px;
-            font-weight: 600;
-            font-size: .85rem;
-            cursor: pointer;
-            transition: all .2s;
-        }
-        
-        .btn-form-cancel:hover {
-            color: var(--white);
-            border-color: rgba(255, 255, 255, .25)
-        }
-        
-        .admin-form-note {
-            font-size: .74rem;
-            color: var(--gray);
-            margin-top: 10px;
-            line-height: 1.6;
-        }
-        
-        @media(max-width:680px) {
-            .admin-form-grid {
-                grid-template-columns: 1fr
-            }
-            .admin-header {
-                padding: 16px 18px
-            }
-            .admin-body {
-                padding: 16px 18px
-            }
-            .admin-login-box {
-                padding: 28px 22px
-            }
+        .nav-admin-link{
+            display:inline-flex;align-items:center;gap:6px;
+            font-size:.85rem;font-weight:500;color:var(--gray);
+            cursor:pointer;transition:color var(--transition);
+            letter-spacing:.02em;text-transform:uppercase;
+            background:none;border:none;padding:0;font-family:inherit;
+        }
+        .nav-admin-link:hover{color:var(--gold)}
+
+        #admin-login-modal, #admin-panel{
+            display:none;position:fixed;inset:0;z-index:9700;
+            background:rgba(5,12,22,.92);
+            backdrop-filter:blur(10px);
+            align-items:center;justify-content:center;
+            padding:20px;opacity:0;transition:opacity .25s ease;
+        }
+        #admin-login-modal.open, #admin-panel.open{display:flex;opacity:1}
+
+        @keyframes adminSlideUp{
+            from{transform:translateY(24px);opacity:0}
+            to{transform:translateY(0);opacity:1}
+        }
+
+        .admin-login-box{
+            background:var(--card-bg);border:1px solid var(--border);
+            border-radius:16px;width:100%;max-width:380px;padding:34px 30px;
+            animation:adminSlideUp .28s ease both;
+            box-shadow:0 32px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(201,152,42,.1);
+            position:relative;
+        }
+        .admin-modal-close{
+            position:absolute;top:16px;right:16px;
+            width:34px;height:34px;border-radius:8px;
+            background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+            color:var(--gray);font-size:1.05rem;
+            display:flex;align-items:center;justify-content:center;
+            cursor:pointer;transition:all .2s;line-height:1;
+        }
+        .admin-modal-close:hover{background:rgba(255,255,255,.12);color:var(--white)}
+        .admin-login-title{
+            font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.3rem;
+            margin-bottom:4px;display:flex;align-items:center;gap:8px;
+        }
+        .admin-login-sub{font-size:.83rem;color:var(--gray);margin-bottom:24px}
+        .admin-field{margin-bottom:16px}
+        .admin-field label{
+            display:block;font-size:.75rem;font-weight:600;letter-spacing:.06em;
+            text-transform:uppercase;color:var(--gray);margin-bottom:7px;
+        }
+        .admin-field input, .admin-field textarea{
+            width:100%;padding:11px 14px;border-radius:8px;
+            background:rgba(255,255,255,.04);
+            border:1px solid rgba(255,255,255,.1);
+            color:var(--white);font-size:.92rem;font-family:inherit;
+            transition:border-color .2s;
+        }
+        .admin-field input:focus, .admin-field textarea:focus{outline:none;border-color:var(--gold)}
+        .admin-error{font-size:.8rem;color:#f06a6a;margin-bottom:14px;display:none}
+        .admin-error.show{display:block}
+        .btn-admin-submit{
+            width:100%;background:var(--gold);color:var(--navy);
+            padding:12px;border-radius:8px;font-weight:700;font-size:.92rem;
+            border:none;cursor:pointer;transition:background .2s;
+        }
+        .btn-admin-submit:hover{background:var(--gold-lt)}
+        .admin-hint{margin-top:18px;font-size:.72rem;color:var(--gray);text-align:center;line-height:1.6}
+
+        /* Admin dashboard */
+        .admin-dialog{
+            background:var(--card-bg);border:1px solid var(--border);
+            border-radius:16px;width:100%;max-width:1000px;max-height:90vh;
+            display:flex;flex-direction:column;overflow:hidden;
+            animation:adminSlideUp .28s ease both;
+            box-shadow:0 32px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(201,152,42,.1);
+        }
+        .admin-header{
+            display:flex;align-items:center;justify-content:space-between;
+            padding:20px 26px;border-bottom:1px solid rgba(255,255,255,.06);
+            flex-shrink:0;flex-wrap:wrap;gap:10px;
+        }
+        .admin-header-title{
+            font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.2rem;
+            display:flex;align-items:center;gap:8px;
+        }
+        .admin-header-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+        .btn-admin-logout{
+            background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+            color:var(--gray);padding:8px 16px;border-radius:7px;
+            font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;
+        }
+        .btn-admin-logout:hover{color:var(--white);border-color:rgba(255,255,255,.25)}
+        .btn-admin-add{
+            background:var(--gold);color:var(--navy);
+            padding:9px 18px;border-radius:7px;font-size:.82rem;font-weight:700;
+            border:none;cursor:pointer;transition:background .2s;
+            display:inline-flex;align-items:center;gap:6px;
+        }
+        .btn-admin-add:hover{background:var(--gold-lt)}
+        .admin-body{flex:1;overflow-y:auto;padding:22px 26px}
+        .admin-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px}
+        .admin-table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:680px}
+        .admin-table th{
+            text-align:left;padding:12px 16px;background:rgba(201,152,42,.07);
+            color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.06em;
+            text-transform:uppercase;border-bottom:1px solid var(--border);white-space:nowrap;
+        }
+        .admin-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:middle}
+        .admin-table tr:last-child td{border-bottom:none}
+        .admin-table-thumb{width:46px;height:46px;border-radius:6px;object-fit:cover;background:rgba(255,255,255,.05);flex-shrink:0}
+        .admin-row-name{font-weight:600;color:var(--ice)}
+        .admin-row-actions{display:flex;gap:8px;white-space:nowrap}
+        .btn-row-edit, .btn-row-delete{
+            padding:6px 13px;border-radius:6px;font-size:.74rem;font-weight:600;
+            cursor:pointer;border:1px solid;transition:all .2s;
+        }
+        .btn-row-edit{background:rgba(201,152,42,.08);border-color:rgba(201,152,42,.3);color:var(--gold-lt)}
+        .btn-row-edit:hover{background:rgba(201,152,42,.18);color:var(--gold)}
+        .btn-row-delete{background:rgba(240,106,106,.08);border-color:rgba(240,106,106,.3);color:#f06a6a}
+        .btn-row-delete:hover{background:rgba(240,106,106,.18)}
+        .admin-empty-note{font-size:.8rem;color:var(--gray);margin-top:14px;line-height:1.6}
+
+        #admin-form-wrap{display:none;margin-top:22px}
+        #admin-form-wrap.show{display:block}
+        .admin-form-title{
+            font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.05rem;
+            margin-bottom:18px;display:flex;align-items:center;gap:8px;
+        }
+        .admin-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+        .admin-form-grid .admin-field{margin-bottom:0}
+        .admin-form-actions{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap}
+        .btn-form-save{
+            background:var(--gold);color:var(--navy);padding:10px 22px;
+            border-radius:7px;font-weight:700;font-size:.85rem;border:none;
+            cursor:pointer;transition:background .2s;
+        }
+        .btn-form-save:hover{background:var(--gold-lt)}
+        .btn-form-cancel{
+            background:transparent;color:var(--gray);border:1px solid rgba(255,255,255,.1);
+            padding:10px 22px;border-radius:7px;font-weight:600;font-size:.85rem;
+            cursor:pointer;transition:all .2s;
+        }
+        .btn-form-cancel:hover{color:var(--white);border-color:rgba(255,255,255,.25)}
+        .admin-form-note{font-size:.74rem;color:var(--gray);margin-top:10px;line-height:1.6}
+
+        /* ── File-picker fields (image / PDF) — gallery upload OR URL ── */
+        .admin-file-field{
+            border:1px dashed rgba(255,255,255,.15);
+            border-radius:8px;padding:12px;
+            background:rgba(255,255,255,.02);
+        }
+        .admin-file-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+        .btn-file-pick{
+            display:inline-flex;align-items:center;gap:7px;
+            background:rgba(201,152,42,.1);border:1px solid rgba(201,152,42,.3);
+            color:var(--gold-lt);padding:9px 14px;border-radius:7px;
+            font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s;
+            white-space:nowrap;
+        }
+        .btn-file-pick:hover{background:rgba(201,152,42,.2);color:var(--gold)}
+        .admin-file-row input[type="text"]{
+            flex:1;min-width:140px;padding:9px 12px;border-radius:7px;
+            background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+            color:var(--white);font-size:.82rem;font-family:inherit;
+        }
+        .admin-file-row input[type="text"]:focus{outline:none;border-color:var(--gold)}
+        .admin-file-preview{
+            margin-top:10px;display:none;align-items:center;gap:10px;
+            font-size:.78rem;color:var(--gray);
+        }
+        .admin-file-preview.show{display:flex}
+        .admin-file-preview img{
+            width:44px;height:44px;border-radius:6px;object-fit:cover;
+            border:1px solid rgba(255,255,255,.1);
+        }
+        .admin-file-preview .pdf-chip{
+            width:44px;height:44px;border-radius:6px;
+            background:rgba(201,152,42,.12);border:1px solid var(--border);
+            display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+        }
+        .admin-file-clear{
+            background:none;border:none;color:var(--gray);cursor:pointer;
+            font-size:.8rem;text-decoration:underline;margin-left:auto;
+        }
+        .admin-file-clear:hover{color:#f06a6a}
+
+        @media(max-width:680px){
+            .admin-form-grid{grid-template-columns:1fr}
+            .admin-header{padding:16px 18px}
+            .admin-body{padding:16px 18px}
+            .admin-login-box{padding:28px 22px}
+            .admin-file-row{flex-direction:column;align-items:stretch}
+            .btn-file-pick{justify-content:center}
         }
     </style>
 </head>
@@ -2333,7 +1726,7 @@
             <a href="#about" onclick="toggleMenu()">About</a>
             <a href="#faq" onclick="toggleMenu()">FAQ</a>
             <a href="https://wa.me/19175921215" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us</a>
-            <button class="mobile-admin-link" onclick="toggleMenu();openAdminLogin()" style="padding:14px 24px;font-size:.9rem;font-weight:500;color:var(--gray);border-bottom:1px solid var(--border);">🔒 Admin Login</button>
+            <button class="mobile-admin-link" onclick="toggleMenu();openAdminLogin()" style="padding:14px 24px;font-size:.9rem;font-weight:500;color:var(--gray);border-bottom:1px solid var(--border);background:none;border-top:none;border-left:none;border-right:none;width:100%;text-align:left;font-family:inherit;cursor:pointer;">🔒 Admin Login</button>
         </div>
     </nav>
 
@@ -3141,11 +2534,11 @@
      ============================================================ -->
     <script>
         /* ─────────────────────────────────────────────
-                                                                                                                                                                                                                                   1. LAZY-LOAD PRODUCT IMAGES
-                                                                                                                                                                                                                                   Each .product-card carries  data-img  with the
-                                                                                                                                                                                                                                   path to its product photo.  We set the <img>
-                                                                                                                                                                                                                                   src here and fade it in once it loads.
-                                                                                                                                                                                                                                   ───────────────────────────────────────────── */
+                                                                                                                                                                                   1. LAZY-LOAD PRODUCT IMAGES
+                                                                                                                                                                                   Each .product-card carries  data-img  with the
+                                                                                                                                                                                   path to its product photo.  We set the <img>
+                                                                                                                                                                                   src here and fade it in once it loads.
+                                                                                                                                                                                   ───────────────────────────────────────────── */
         document.querySelectorAll('.product-card').forEach(function(card) {
             var imgSrc = card.dataset.img;
             var img = card.querySelector('.prod-img-wrap img');
@@ -3374,6 +2767,8 @@
            - Login modal (username/password check, client-side only)
            - Session persisted in sessionStorage so it clears on tab close
            - Product CRUD stored in localStorage, merged into #product-grid
+           - Image/PDF fields support BOTH a gallery/file picker (converted
+             to a data URL) AND a plain URL typed/pasted into the text field
            ============================================================
            ⚠ NOTE: This is a CLIENT-SIDE-ONLY login for convenience.
            Anyone who reads the page source can see the credentials below.
@@ -3383,98 +2778,9 @@
         var ADMIN_PASSWORD = 'peptiva2024';
         var ADMIN_SESSION_KEY = 'peptivaAdminLoggedIn';
         var ADMIN_PRODUCTS_KEY = 'peptivaAdminProducts';
-        var ADMIN_GALLERY_IMAGES = ['images/bacwater.jpg', 'images/bpc157.jpg', 'images/cjcipa.jpg', 'images/ghkcu.jpg', 'images/motsc.jpg', 'images/nad.jpg', 'images/pt141.jpg', 'images/retatrutide.jpg', 'images/semaglutide.jpg', 'images/semax.jpg', 'images/tesamorelin.jpg', 'images/tirzepatide.jpg'];
-        var ADMIN_GALLERY_COA_IMAGES = ['coa/bacwater.jpg', 'coa/bpc157.jpg', 'coa/cjcipa.jpg', 'coa/ghkcu.jpg', 'coa/motsc.jpg', 'coa/nad.jpg', 'coa/pt141.jpg', 'coa/retatrutide.jpg', 'coa/semaglutide.jpg', 'coa/semax.jpg', 'coa/tesamorelin.jpg', 'coa/tirzepatide.jpg'];
-        var ADMIN_GALLERY_PDFS = ['pdfs/bacwater.pdf', 'pdfs/bpc157.pdf', 'pdfs/cjcipa.pdf', 'pdfs/ghkcu.pdf', 'pdfs/motsc.pdf', 'pdfs/nad.pdf', 'pdfs/pt141.pdf', 'pdfs/retatrutide.pdf', 'pdfs/semaglutide.pdf', 'pdfs/semax.pdf', 'pdfs/tesamorelin.pdf', 'pdfs/tirzepatide.pdf'];
-
-        function buildGallerySelect(selectEl, items, placeholderText) {
-            if (!selectEl) return;
-            selectEl.innerHTML = '<option value="">' + placeholderText + '</option>';
-            items.forEach(function(item) {
-                var option = document.createElement('option');
-                option.value = item;
-                option.textContent = item;
-                selectEl.appendChild(option);
-            });
-        }
-
-        function syncGallerySelection(selectEl, value) {
-            if (!selectEl) return;
-            var normalizedValue = (value || '').trim();
-            if (!normalizedValue) {
-                selectEl.value = '';
-                return;
-            }
-            selectEl.value = normalizedValue;
-        }
-
-        function populateGalleryPickers() {
-            buildGallerySelect(document.getElementById('admin-f-img-picker'), ADMIN_GALLERY_IMAGES, 'Choose from image gallery');
-            buildGallerySelect(document.getElementById('admin-f-coaimg-picker'), ADMIN_GALLERY_COA_IMAGES, 'Choose from COA image gallery');
-            buildGallerySelect(document.getElementById('admin-f-coapdf-picker'), ADMIN_GALLERY_PDFS, 'Choose from PDF gallery');
-        }
-
-        function bindGalleryPickerEvents() {
-            var imgPicker = document.getElementById('admin-f-img-picker');
-            var coaImgPicker = document.getElementById('admin-f-coaimg-picker');
-            var coaPdfPicker = document.getElementById('admin-f-coapdf-picker');
-            if (imgPicker) {
-                imgPicker.addEventListener('change', function() {
-                    if (this.value) document.getElementById('admin-f-img').value = this.value;
-                });
-            }
-            if (coaImgPicker) {
-                coaImgPicker.addEventListener('change', function() {
-                    if (this.value) document.getElementById('admin-f-coaimg').value = this.value;
-                });
-            }
-            if (coaPdfPicker) {
-                coaPdfPicker.addEventListener('change', function() {
-                    if (this.value) document.getElementById('admin-f-coapdf').value = this.value;
-                });
-            }
-        }
-
-        function handleAdminImageUpload(fileInput, targetInput, previewEl, metaEl) {
-            var file = fileInput && fileInput.files && fileInput.files[0];
-            if (!file) return;
-            if (!file.type || !file.type.startsWith('image/')) {
-                if (metaEl) metaEl.textContent = 'Please choose an image file.';
-                return;
-            }
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                var dataUrl = e.target.result;
-                if (targetInput) targetInput.value = dataUrl;
-                if (previewEl) {
-                    previewEl.src = dataUrl;
-                    previewEl.style.display = 'block';
-                }
-                if (metaEl) {
-                    metaEl.textContent = 'Selected: ' + file.name + ' (' + Math.round(file.size / 1024) + ' KB)';
-                }
-            };
-            reader.readAsDataURL(file);
-        }
-
-        function bindAdminImageUploadInputs() {
-            var imgFile = document.getElementById('admin-f-img-file');
-            var coaFile = document.getElementById('admin-f-coaimg-file');
-            if (imgFile) {
-                imgFile.addEventListener('change', function() {
-                    handleAdminImageUpload(this, document.getElementById('admin-f-img'), document.getElementById('admin-f-img-preview'), document.getElementById('admin-f-img-meta'));
-                });
-            }
-            if (coaFile) {
-                coaFile.addEventListener('change', function() {
-                    handleAdminImageUpload(this, document.getElementById('admin-f-coaimg'), document.getElementById('admin-f-coaimg-preview'), document.getElementById('admin-f-coaimg-meta'));
-                });
-            }
-        }
 
         /* ---------- Login modal open/close ---------- */
         function openAdminLogin() {
-            // If already logged in this session, skip straight to the dashboard
             if (sessionStorage.getItem(ADMIN_SESSION_KEY) === 'true') {
                 openAdminPanel();
                 return;
@@ -3484,13 +2790,10 @@
             document.getElementById('admin-login-form').reset();
             modal.style.display = 'flex';
             requestAnimationFrame(function() {
-                requestAnimationFrame(function() {
-                    modal.classList.add('open');
-                });
+                requestAnimationFrame(function() { modal.classList.add('open'); });
             });
             document.body.style.overflow = 'hidden';
         }
-
         function closeAdminLogin() {
             var modal = document.getElementById('admin-login-modal');
             modal.classList.remove('open');
@@ -3526,13 +2829,10 @@
             var modal = document.getElementById('admin-panel');
             modal.style.display = 'flex';
             requestAnimationFrame(function() {
-                requestAnimationFrame(function() {
-                    modal.classList.add('open');
-                });
+                requestAnimationFrame(function() { modal.classList.add('open'); });
             });
             document.body.style.overflow = 'hidden';
         }
-
         function closeAdminPanel() {
             var modal = document.getElementById('admin-panel');
             modal.classList.remove('open');
@@ -3544,7 +2844,6 @@
         document.getElementById('admin-panel').addEventListener('click', function(e) {
             if (e.target === this) closeAdminPanel();
         });
-
         function adminLogout() {
             sessionStorage.removeItem(ADMIN_SESSION_KEY);
             closeAdminPanel();
@@ -3558,9 +2857,12 @@
                 return [];
             }
         }
-
         function setAdminProducts(list) {
-            localStorage.setItem(ADMIN_PRODUCTS_KEY, JSON.stringify(list));
+            try {
+                localStorage.setItem(ADMIN_PRODUCTS_KEY, JSON.stringify(list));
+            } catch (err) {
+                alert('Could not save: storage limit reached. Try using smaller images or pasting URLs instead of uploading large photos.');
+            }
         }
 
         /* ---------- Render admin table rows ---------- */
@@ -3572,7 +2874,7 @@
                 return;
             }
             tbody.innerHTML = products.map(function(p) {
-                var thumb = p.img ? '<img class="admin-table-thumb" src="' + escapeHtml(p.img) + '" alt="" onerror="this.style.opacity=0.15" />' : '<div class="admin-table-thumb"></div>';
+                var thumb = p.img ? '<img class="admin-table-thumb" src="' + p.img + '" alt="" onerror="this.style.opacity=0.15" />' : '<div class="admin-table-thumb"></div>';
                 return '<tr>' +
                     '<td>' + thumb + '</td>' +
                     '<td class="admin-row-name">' + escapeHtml(p.name) + '</td>' +
@@ -3586,50 +2888,80 @@
                     '</tr>';
             }).join('');
         }
-
         function escapeHtml(str) {
             if (!str) return '';
             return String(str).replace(/[&<>"']/g, function(c) {
-                return ({
-                    '&': '&amp;',
-                    '<': '&lt;',
-                    '>': '&gt;',
-                    '"': '&quot;',
-                    "'": '&#39;'
-                })[c];
+                return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
             });
+        }
+
+        /* ---------- File picker (gallery / file system) handling ----------
+           Each of the 3 fields (img, coaimg, coapdf) has:
+             - a hidden <input type="file"> triggered by "Choose..." button
+             - a visible <input type="text"> for pasting a URL instead
+             - a preview row showing whichever value is currently set
+           Picking a file converts it to a base64 data URL via FileReader
+           and writes that string into the matching text input, so saving
+           the form works identically whether the value came from the
+           gallery or was typed in as a URL.
+        ------------------------------------------------------------------- */
+        function handleFilePick(event, fieldKey) {
+            var file = event.target.files && event.target.files[0];
+            if (!file) return;
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var dataUrl = e.target.result;
+                document.getElementById('admin-f-' + fieldKey).value = dataUrl;
+                updateFilePreview(fieldKey, dataUrl, file.name);
+            };
+            reader.onerror = function() {
+                alert('Could not read that file. Please try a different file or paste a URL instead.');
+            };
+            reader.readAsDataURL(file);
+        }
+        function handleUrlInput(fieldKey) {
+            var val = document.getElementById('admin-f-' + fieldKey).value.trim();
+            if (val) {
+                updateFilePreview(fieldKey, val, val.split('/').pop());
+            } else {
+                clearFileField(fieldKey, true);
+            }
+        }
+        function updateFilePreview(fieldKey, src, label) {
+            var previewBox = document.getElementById('admin-preview-' + fieldKey);
+            var labelEl = document.getElementById('admin-preview-' + fieldKey + '-label');
+            previewBox.classList.add('show');
+            labelEl.textContent = label && label.length < 40 ? label : 'File selected';
+            if (fieldKey !== 'coapdf') {
+                var imgTag = document.getElementById('admin-preview-' + fieldKey + '-tag');
+                imgTag.src = src;
+                imgTag.onerror = function() { imgTag.style.opacity = '0.2'; };
+            }
+        }
+        function clearFileField(fieldKey, skipInputClear) {
+            if (!skipInputClear) {
+                document.getElementById('admin-f-' + fieldKey).value = '';
+            }
+            document.getElementById('admin-preview-' + fieldKey).classList.remove('show');
         }
 
         /* ---------- Add / Edit form ---------- */
         function showAdminForm() {
             document.getElementById('admin-form-wrap').classList.add('show');
-            document.getElementById('admin-form-wrap').scrollIntoView({
-                behavior: 'smooth',
-                block: 'nearest'
-            });
+            document.getElementById('admin-form-wrap').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-
         function hideAdminForm() {
             document.getElementById('admin-form-wrap').classList.remove('show');
             document.getElementById('admin-product-form').reset();
             document.getElementById('admin-edit-id').value = '';
-            document.getElementById('admin-f-img-picker').value = '';
-            document.getElementById('admin-f-coaimg-picker').value = '';
-            document.getElementById('admin-f-coapdf-picker').value = '';
-            document.getElementById('admin-f-img-file').value = '';
-            document.getElementById('admin-f-coaimg-file').value = '';
-            document.getElementById('admin-f-img-preview').style.display = 'none';
-            document.getElementById('admin-f-coaimg-preview').style.display = 'none';
-            document.getElementById('admin-f-img-meta').textContent = 'Tap to open your phone gallery or camera.';
-            document.getElementById('admin-f-coaimg-meta').textContent = 'Tap to open your phone gallery or camera.';
             document.getElementById('admin-form-title').textContent = 'Add New Product';
+            clearFileField('img', true);
+            clearFileField('coaimg', true);
+            clearFileField('coapdf', true);
         }
-
         function editAdminProduct(id) {
             var products = getAdminProducts();
-            var p = products.find(function(x) {
-                return x.id === id;
-            });
+            var p = products.find(function(x) { return x.id === id; });
             if (!p) return;
             document.getElementById('admin-edit-id').value = p.id;
             document.getElementById('admin-f-name').value = p.name || '';
@@ -3639,24 +2971,25 @@
             document.getElementById('admin-f-img').value = p.img || '';
             document.getElementById('admin-f-coaimg').value = p.coaImg || '';
             document.getElementById('admin-f-coapdf').value = p.coaPdf || '';
-            syncGallerySelection(document.getElementById('admin-f-img-picker'), p.img || '');
-            syncGallerySelection(document.getElementById('admin-f-coaimg-picker'), p.coaImg || '');
-            syncGallerySelection(document.getElementById('admin-f-coapdf-picker'), p.coaPdf || '');
             document.getElementById('admin-f-badge').value = p.badge || '';
             document.getElementById('admin-form-title').textContent = 'Edit Product';
+
+            if (p.img) updateFilePreview('img', p.img, p.img.startsWith('data:') ? 'Uploaded image' : p.img.split('/').pop());
+            else clearFileField('img', true);
+            if (p.coaImg) updateFilePreview('coaimg', p.coaImg, p.coaImg.startsWith('data:') ? 'Uploaded image' : p.coaImg.split('/').pop());
+            else clearFileField('coaimg', true);
+            if (p.coaPdf) updateFilePreview('coapdf', p.coaPdf, p.coaPdf.startsWith('data:') ? 'Uploaded PDF' : p.coaPdf.split('/').pop());
+            else clearFileField('coapdf', true);
+
             showAdminForm();
         }
-
         function deleteAdminProduct(id) {
             if (!confirm('Delete this product? This cannot be undone.')) return;
-            var products = getAdminProducts().filter(function(x) {
-                return x.id !== id;
-            });
+            var products = getAdminProducts().filter(function(x) { return x.id !== id; });
             setAdminProducts(products);
             renderAdminTable();
             renderLiveProductGrid();
         }
-
         function saveAdminProduct(e) {
             e.preventDefault();
             var id = document.getElementById('admin-edit-id').value;
@@ -3675,9 +3008,7 @@
             if (!data.name) return false;
 
             if (id) {
-                var idx = products.findIndex(function(x) {
-                    return x.id === id;
-                });
+                var idx = products.findIndex(function(x) { return x.id === id; });
                 if (idx > -1) products[idx] = data;
             } else {
                 products.push(data);
@@ -3693,10 +3024,7 @@
         function renderLiveProductGrid() {
             var grid = document.getElementById('product-grid');
             if (!grid) return;
-            // Remove any previously injected admin cards
-            grid.querySelectorAll('.product-card[data-admin-product="true"]').forEach(function(el) {
-                el.remove();
-            });
+            grid.querySelectorAll('.product-card[data-admin-product="true"]').forEach(function(el) { el.remove(); });
 
             var products = getAdminProducts();
             products.forEach(function(p) {
@@ -3734,7 +3062,6 @@
 
                 grid.appendChild(card);
 
-                // Wire up the product image lazy-load (same pattern used for static cards)
                 var imgSrc = card.dataset.img;
                 var imgEl = card.querySelector('.prod-img-wrap img');
                 if (imgSrc) {
@@ -3744,9 +3071,7 @@
                         var ph = card.querySelector('.prod-img-placeholder');
                         if (ph) ph.style.display = 'none';
                     };
-                    imgEl.onerror = function() {
-                        imgEl.style.display = 'none';
-                    };
+                    imgEl.onerror = function() { imgEl.style.display = 'none'; };
                 } else {
                     imgEl.style.display = 'none';
                 }
@@ -3754,17 +3079,8 @@
         }
 
         // Render any saved admin products as soon as the page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            populateGalleryPickers();
-            bindGalleryPickerEvents();
-            bindAdminImageUploadInputs();
-            renderLiveProductGrid();
-        });
-        // In case DOMContentLoaded already fired (defensive)
+        document.addEventListener('DOMContentLoaded', renderLiveProductGrid);
         if (document.readyState === 'complete' || document.readyState === 'interactive') {
-            populateGalleryPickers();
-            bindGalleryPickerEvents();
-            bindAdminImageUploadInputs();
             renderLiveProductGrid();
         }
 
@@ -3783,7 +3099,7 @@
          ============================================================ -->
     <div id="admin-login-modal" role="dialog" aria-modal="true">
         <div class="admin-login-box">
-            <button class="modal-close" onclick="closeAdminLogin()" aria-label="Close">✕</button>
+            <button class="admin-modal-close" onclick="closeAdminLogin()" aria-label="Close">✕</button>
             <div class="admin-login-title">🔒 Admin Login</div>
             <p class="admin-login-sub">Restricted area — Peptiva Lord staff only.</p>
             <div class="admin-error" id="admin-login-error">Invalid username or password.</div>
@@ -3805,9 +3121,13 @@
     <!-- ============================================================
          ADMIN — DASHBOARD PANEL
          Lets the logged-in admin add, edit, or delete products.
-         Products created/edited here are stored in localStorage
-         under the key "peptivaAdminProducts" and merged into the
-         live product grid automatically.
+         Image / COA image / COA PDF fields let the admin EITHER:
+           1. Tap "Choose from Gallery / Files" to pick a photo/PDF
+              straight from their phone or computer (converted to a
+              data URL and stored), OR
+           2. Paste a direct URL into the text field instead.
+         Products are stored in localStorage ("peptivaAdminProducts")
+         and merged live into the existing #product-grid.
          ============================================================ -->
     <div id="admin-panel" role="dialog" aria-modal="true">
         <div class="admin-dialog">
@@ -3816,7 +3136,7 @@
                 <div class="admin-header-actions">
                     <button class="btn-admin-add" onclick="showAdminForm()">+ Add Product</button>
                     <button class="btn-admin-logout" onclick="adminLogout()">Log Out</button>
-                    <button class="modal-close" onclick="closeAdminPanel()" aria-label="Close">✕</button>
+                    <button class="admin-modal-close" onclick="closeAdminPanel()" aria-label="Close">✕</button>
                 </div>
             </div>
             <div class="admin-body">
@@ -3862,46 +3182,75 @@
                                 <label for="admin-f-purity">Purity</label>
                                 <input type="text" id="admin-f-purity" placeholder="e.g. 99.5%" />
                             </div>
-                            <div class="admin-field">
-                                <label for="admin-f-img">Product Image</label>
-                                <div class="admin-upload-box">
-                                    <label class="admin-upload-btn" for="admin-f-img-file">📷 Choose from gallery / camera</label>
-                                    <input type="file" id="admin-f-img-file" accept="image/*" capture="environment" />
-                                    <div class="admin-upload-meta" id="admin-f-img-meta">Tap to open your phone gallery or camera.</div>
-                                    <img class="admin-upload-preview" id="admin-f-img-preview" alt="Selected product preview" />
+                        </div>
+
+                        <!-- Product image: gallery picker OR URL -->
+                        <div class="admin-field">
+                            <label>Product Image</label>
+                            <div class="admin-file-field">
+                                <div class="admin-file-row">
+                                    <label class="btn-file-pick">
+                                        📷 Choose from Gallery
+                                        <input type="file" accept="image/*" style="display:none" onchange="handleFilePick(event,'img')" />
+                                    </label>
+                                    <input type="text" id="admin-f-img" placeholder="or paste an image URL (images/yourproduct.jpg)" oninput="handleUrlInput('img')" />
                                 </div>
-                                <select id="admin-f-img-picker"></select>
-                                <input type="text" id="admin-f-img" placeholder="images/yourproduct.jpg or a data:image URL" />
-                                <div class="admin-picker-help">Use the camera/gallery button for a fresh photo, or pick from the built-in gallery list. You can also paste a URL if needed.</div>
-                            </div>
-                            <div class="admin-field">
-                                <label for="admin-f-coaimg">COA Image</label>
-                                <div class="admin-upload-box">
-                                    <label class="admin-upload-btn" for="admin-f-coaimg-file">📷 Choose from gallery / camera</label>
-                                    <input type="file" id="admin-f-coaimg-file" accept="image/*" capture="environment" />
-                                    <div class="admin-upload-meta" id="admin-f-coaimg-meta">Tap to open your phone gallery or camera.</div>
-                                    <img class="admin-upload-preview" id="admin-f-coaimg-preview" alt="Selected COA preview" />
+                                <div class="admin-file-preview" id="admin-preview-img">
+                                    <img id="admin-preview-img-tag" src="" alt="" />
+                                    <span id="admin-preview-img-label">Selected</span>
+                                    <button type="button" class="admin-file-clear" onclick="clearFileField('img')">Remove</button>
                                 </div>
-                                <select id="admin-f-coaimg-picker"></select>
-                                <input type="text" id="admin-f-coaimg" placeholder="coa/yourproduct.jpg or a data:image URL" />
-                                <div class="admin-picker-help">Use the camera/gallery button for a fresh COA photo, or pick from the built-in gallery list. You can also paste a URL if needed.</div>
-                            </div>
-                            <div class="admin-field">
-                                <label for="admin-f-coapdf">COA PDF</label>
-                                <select id="admin-f-coapdf-picker"></select>
-                                <input type="text" id="admin-f-coapdf" placeholder="pdfs/yourproduct.pdf" />
-                                <div class="admin-picker-help">Choose a PDF from the gallery or type a custom URL.</div>
-                            </div>
-                            <div class="admin-field">
-                                <label for="admin-f-badge">Badge Text (optional)</label>
-                                <input type="text" id="admin-f-badge" placeholder="e.g. 🔥 Top Seller" />
                             </div>
                         </div>
+
+                        <!-- COA image: gallery picker OR URL -->
+                        <div class="admin-field">
+                            <label>COA Image</label>
+                            <div class="admin-file-field">
+                                <div class="admin-file-row">
+                                    <label class="btn-file-pick">
+                                        📷 Choose from Gallery
+                                        <input type="file" accept="image/*" style="display:none" onchange="handleFilePick(event,'coaimg')" />
+                                    </label>
+                                    <input type="text" id="admin-f-coaimg" placeholder="or paste a COA image URL (coa/yourproduct.jpg)" oninput="handleUrlInput('coaimg')" />
+                                </div>
+                                <div class="admin-file-preview" id="admin-preview-coaimg">
+                                    <img id="admin-preview-coaimg-tag" src="" alt="" />
+                                    <span id="admin-preview-coaimg-label">Selected</span>
+                                    <button type="button" class="admin-file-clear" onclick="clearFileField('coaimg')">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COA PDF: file picker OR URL -->
+                        <div class="admin-field">
+                            <label>COA PDF</label>
+                            <div class="admin-file-field">
+                                <div class="admin-file-row">
+                                    <label class="btn-file-pick">
+                                        📄 Choose PDF File
+                                        <input type="file" accept="application/pdf" style="display:none" onchange="handleFilePick(event,'coapdf')" />
+                                    </label>
+                                    <input type="text" id="admin-f-coapdf" placeholder="or paste a COA PDF URL (pdfs/yourproduct.pdf)" oninput="handleUrlInput('coapdf')" />
+                                </div>
+                                <div class="admin-file-preview" id="admin-preview-coapdf">
+                                    <span class="pdf-chip">📄</span>
+                                    <span id="admin-preview-coapdf-label">Selected</span>
+                                    <button type="button" class="admin-file-clear" onclick="clearFileField('coapdf')">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="admin-field">
+                            <label for="admin-f-badge">Badge Text (optional)</label>
+                            <input type="text" id="admin-f-badge" placeholder="e.g. 🔥 Top Seller" />
+                        </div>
+
                         <div class="admin-form-actions">
                             <button type="submit" class="btn-form-save">Save Product</button>
                             <button type="button" class="btn-form-cancel" onclick="hideAdminForm()">Cancel</button>
                         </div>
-                        <p class="admin-form-note">You can now upload a product or COA image directly from the phone gallery or camera, choose from the built-in gallery list, or paste a custom URL if needed. Leave blank to use the placeholder.</p>
+                        <p class="admin-form-note">Tap "Choose from Gallery" to pick a photo or PDF straight from your device, or paste a direct URL instead. Gallery picks are stored directly in this browser.</p>
                     </form>
                 </div>
 
