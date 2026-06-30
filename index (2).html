@@ -1,0 +1,3263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peptiva Lord — Premium Research Peptides | Lab Tested | USA Stock</title>
+    <meta name="description" content="Premium research peptides — batch-tested with COA. 99%+ purity. USA stock. Worldwide shipping. Retatrutide, Tirzepatide, BPC-157, Semaglutide & more." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        /* ============================================================
+   PEPTIVA LORD — DESIGN TOKENS
+   ============================================================ */
+        
+         :root {
+            --navy: #0D1B2A;
+            --navy2: #162338;
+            --gold: #C9982A;
+            --gold-lt: #E8B84B;
+            --ice: #E8F1FB;
+            --white: #FFFFFF;
+            --gray: #8A9BB0;
+            --border: rgba(201, 152, 42, 0.18);
+            --card-bg: #131F30;
+            --green: #4CAF7D;
+            --radius: 10px;
+            --transition: 0.22s ease;
+        }
+        
+         :root[data-theme="light"] {
+            --navy: #F8F9FA;
+            --navy2: #FFFFFF;
+            --card-bg: #FFFFFF;
+            --white: #1A1A1A;
+            --gray: #4A5568;
+            --border: rgba(201, 152, 42, 0.25);
+            --ice: #2D3748;
+        }
+        
+         :root[data-theme="light"] h1 {
+            color: #FFFFFF;
+        }
+        
+         :root[data-theme="light"] .hero {
+            background: linear-gradient(160deg, #1A1A1A 0%, #2D3748 100%);
+        }
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+        
+        html {
+            scroll-behavior: smooth
+        }
+        
+        body {
+            background: var(--navy);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            line-height: 1.65;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+        
+        img {
+            max-width: 100%;
+            display: block
+        }
+        /* ── NAV ── */
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(13, 27, 42, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            height: 64px;
+        }
+        
+        .logo {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: -.02em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+        }
+        
+        .logo span {
+            color: var(--white)
+        }
+        
+        .logo img {
+            height: 32px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-left: auto;
+        }
+        
+        .nav-links a {
+            font-size: .85rem;
+            font-weight: 500;
+            color: var(--gray);
+            transition: color var(--transition);
+            letter-spacing: .02em;
+            text-transform: uppercase;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold)
+        }
+        
+        .nav-cta {
+            background: var(--gold);
+            color: var(--navy)!important;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 700!important;
+            transition: background var(--transition)!important;
+        }
+        
+        .nav-cta:hover {
+            background: var(--gold-lt)!important;
+            color: var(--navy)!important
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: .2s
+        }
+        
+        .theme-toggle {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .1);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, .12);
+            color: var(--gold);
+        }
+        
+        .theme-toggle svg {
+            width: 18px;
+            height: 18px;
+        }
+        
+        #mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background: var(--navy2);
+            border-top: 1px solid var(--border);
+        }
+        
+        #mobile-menu.open {
+            display: flex
+        }
+        
+        #mobile-menu a {
+            padding: 14px 24px;
+            font-size: .9rem;
+            font-weight: 500;
+            color: var(--gray);
+            border-bottom: 1px solid var(--border);
+            transition: color var(--transition);
+        }
+        
+        #mobile-menu a:hover {
+            color: var(--gold)
+        }
+        /* ── HERO ── */
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(160deg, #0D1B2A 0%, #0A1520 100%);
+            padding: 120px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 60% 40%, rgba(201, 152, 42, .08) 0%, transparent 65%), url("images/hero-bg.png") center/contain no-repeat;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative
+        }
+        
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 152, 42, .1);
+            border: 1px solid var(--border);
+            color: var(--gold);
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin-bottom: 28px;
+        }
+        
+        .hero-eyebrow svg {
+            width: 14px;
+            height: 14px
+        }
+        
+        h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(2.6rem, 6vw, 4.8rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -.03em;
+            max-width: 740px;
+            margin-bottom: 8px;
+        }
+        
+        h1 em {
+            color: var(--gold);
+            font-style: normal
+        }
+        
+        .hero-sub {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--gray);
+            max-width: 560px;
+            margin: 18px 0 36px;
+            line-height: 1.6;
+        }
+        
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: .95rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy)
+        }
+        
+        .btn-primary:hover {
+            background: var(--gold-lt);
+            transform: translateY(-1px)
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1.5px solid rgba(255, 255, 255, .2)
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold)
+        }
+        
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 52px
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid var(--border);
+            padding: 10px 18px;
+            border-radius: 50px;
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--ice);
+        }
+        
+        .badge-icon {
+            font-size: 1rem
+        }
+        /* ── SECTION SHELL ── */
+        
+        section {
+            padding: 90px 24px
+        }
+        
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto
+        }
+        
+        .section-label {
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: -.02em;
+            margin-bottom: 14px;
+        }
+        
+        .section-desc {
+            color: var(--gray);
+            max-width: 520px;
+            font-size: .97rem;
+            line-height: 1.7
+        }
+        /* ── CATEGORIES ── */
+        
+        #products {
+            background: var(--navy2)
+        }
+        
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 48px;
+        }
+        
+        .cat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: border-color var(--transition), transform var(--transition);
+            cursor: pointer;
+        }
+        
+        .cat-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px)
+        }
+        
+        .cat-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(201, 152, 42, .12);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 18px;
+        }
+        
+        .cat-name {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 8px
+        }
+        
+        .cat-items {
+            font-size: .82rem;
+            color: var(--gray);
+            line-height: 1.7
+        }
+        /* ============================================================
+   ENHANCED PRODUCT GRID & CARDS
+   ============================================================ */
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 22px;
+            margin-top: 48px;
+        }
+        /*
+  PRODUCT CARD — each card now has:
+  1. .prod-img-wrap  → image area at top
+  2. .prod-body      → content area below
+*/
+        
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            /* so image corners obey border-radius */
+            display: flex;
+            flex-direction: column;
+            transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+        }
+        
+        .product-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(201, 152, 42, .12);
+        }
+        /* ── Product image wrapper ── */
+        
+        .prod-img-wrap {
+            position: relative;
+            width: 100%;
+            /* Fixed aspect ratio — change padding-top to adjust height */
+            padding-top: 62%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f1e30 0%, #1a2e44 100%);
+            flex-shrink: 0;
+            cursor: zoom-in;
+        }
+        /*
+  HOW TO ADD PRODUCT IMAGES:
+  Place images inside the  images/  folder next to index.html.
+  Naming convention: images/retatrutide.jpg, images/tirzepatide.jpg …
+  Recommended size: 600×375 px (16:10), JPEG or WebP.
+  If no image is supplied the placeholder gradient + molecule icon shows instead.
+*/
+        
+        .prod-img-wrap img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .4s ease, opacity .3s ease;
+            opacity: 0;
+            /* hidden until loaded */
+        }
+        
+        .prod-img-wrap img.loaded {
+            opacity: 1
+        }
+        
+        .product-card:hover .prod-img-wrap img {
+            transform: scale(1.04)
+        }
+        /* Placeholder shown while / if image is missing */
+        
+        .prod-img-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .prod-img-placeholder svg {
+            width: 48px;
+            height: 48px;
+            opacity: .18;
+            stroke: var(--gold);
+        }
+        
+        .prod-img-placeholder span {
+            font-size: .68rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(201, 152, 42, .35);
+        }
+        /* Badge overlaid on image */
+        
+        .prod-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            background: rgba(13, 27, 42, .82);
+            backdrop-filter: blur(6px);
+            border: 1px solid var(--border);
+            color: var(--gold);
+            padding: 4px 11px;
+            border-radius: 20px;
+        }
+        /* Category chip on image */
+        
+        .prod-category {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 2;
+            font-size: .65rem;
+            font-weight: 600;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+            background: rgba(13, 27, 42, .75);
+            backdrop-filter: blur(4px);
+            color: var(--gray);
+            padding: 3px 9px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+        /* ── Product body ── */
+        
+        .prod-body {
+            padding: 20px 20px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            flex: 1;
+        }
+        
+        .prod-name {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            line-height: 1.25;
+            margin-bottom: 5px;
+        }
+        
+        .prod-purity {
+            font-size: .78rem;
+            color: var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        
+        .prod-purity::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            flex-shrink: 0;
+        }
+        /* Two-button row: COA | Inquire */
+        
+        .prod-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 9px;
+            margin-top: auto;
+        }
+        /*
+  📄 View COA button — gold-tinted outline
+  Clicking this opens the COA modal for that product.
+*/
+        
+        .btn-coa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: rgba(201, 152, 42, .08);
+            border: 1px solid rgba(201, 152, 42, .35);
+            color: var(--gold-lt);
+            padding: 9px 6px;
+            border-radius: 7px;
+            font-size: .78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s ease;
+            white-space: nowrap;
+        }
+        
+        .btn-coa:hover {
+            background: rgba(201, 152, 42, .18);
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-1px);
+        }
+        /*
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Inquire button — unchanged from original
+*/
+        
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: rgba(37, 211, 102, .1);
+            border: 1px solid rgba(37, 211, 102, .3);
+            color: #4ade80;
+            padding: 9px 6px;
+            border-radius: 7px;
+            font-size: .78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .2s ease;
+            white-space: nowrap;
+        }
+        
+        .btn-wa:hover {
+            background: rgba(37, 211, 102, .2);
+            border-color: #25D366;
+            color: #25D366;
+            transform: translateY(-1px);
+        }
+        /* ============================================================
+   COA MODAL
+   ============================================================ */
+        /*
+  The modal backdrop — full screen, dark overlay.
+  Activated by adding  .open  via JS.
+*/
+        
+        #coa-modal {
+            display: none;
+            /* hidden by default */
+            position: fixed;
+            inset: 0;
+            z-index: 9000;
+            background: rgba(5, 12, 22, .88);
+            backdrop-filter: blur(10px);
+            /* flex layout: center the dialog */
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            /* entrance animation */
+            opacity: 0;
+            transition: opacity .25s ease;
+        }
+        
+        #coa-modal.open {
+            display: flex;
+            opacity: 1;
+        }
+        /* Animate-in keyframe */
+        
+        @keyframes modalSlideUp {
+            from {
+                transform: translateY(24px);
+                opacity: 0
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1
+            }
+        }
+        /* The white dialog box */
+        
+        .modal-dialog {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 820px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            animation: modalSlideUp .28s ease both;
+            box-shadow: 0 32px 80px rgba(0, 0, 0, .6), 0 0 0 1px rgba(201, 152, 42, .1);
+        }
+        /* Modal header bar */
+        
+        .modal-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 22px 26px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+            flex-shrink: 0;
+        }
+        
+        .modal-header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px
+        }
+        
+        .modal-product-name {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        
+        .modal-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 6px;
+        }
+        
+        .modal-pill {
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .pill-lot {
+            background: rgba(138, 155, 176, .1);
+            color: var(--gray);
+            border: 1px solid rgba(138, 155, 176, .2)
+        }
+        
+        .pill-purity {
+            background: rgba(76, 175, 125, .1);
+            color: var(--green);
+            border: 1px solid rgba(76, 175, 125, .2)
+        }
+        
+        .pill-coa-label {
+            background: rgba(201, 152, 42, .1);
+            color: var(--gold);
+            border: 1px solid var(--border)
+        }
+        /* × close button */
+        
+        .modal-close {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .1);
+            color: var(--gray);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all .2s;
+            line-height: 1;
+        }
+        
+        .modal-close:hover {
+            background: rgba(255, 255, 255, .12);
+            color: var(--white)
+        }
+        /* Scrollable body */
+        
+        .modal-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 22px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        /*
+  COA image container.
+  Clicking the image opens the zoom overlay.
+*/
+        
+        .coa-img-container {
+            position: relative;
+            background: linear-gradient(135deg, #0a1520 0%, #1a2e44 100%);
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: zoom-in;
+            min-height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .coa-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform .3s ease;
+        }
+        
+        .coa-img-container:hover img {
+            transform: scale(1.01)
+        }
+        /* Zoom hint badge on the image */
+        
+        .zoom-hint {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(13, 27, 42, .8);
+            backdrop-filter: blur(6px);
+            border: 1px solid var(--border);
+            color: var(--gold);
+            font-size: .68rem;
+            font-weight: 600;
+            letter-spacing: .05em;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            pointer-events: none;
+        }
+        /* Placeholder shown in the modal when no COA image is supplied */
+        
+        .coa-img-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            padding: 60px 20px;
+            text-align: center;
+            min-height: 220px;
+        }
+        
+        .coa-img-placeholder svg {
+            width: 52px;
+            height: 52px;
+            opacity: .2;
+            stroke: var(--gold)
+        }
+        
+        .coa-img-placeholder p {
+            font-size: .85rem;
+            color: var(--gray);
+            line-height: 1.6
+        }
+        
+        .coa-img-placeholder a {
+            color: var(--gold);
+            text-decoration: underline
+        }
+        /* COA data table row inside modal */
+        
+        .coa-data-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .05);
+            font-size: .85rem;
+        }
+        
+        .coa-data-row:last-child {
+            border-bottom: none
+        }
+        
+        .coa-data-label {
+            color: var(--gray)
+        }
+        
+        .coa-data-val {
+            font-weight: 600;
+            color: var(--ice)
+        }
+        
+        .coa-data-pass {
+            color: var(--green);
+            font-size: .78rem;
+            margin-left: 6px
+        }
+        /* Modal footer: download + close buttons */
+        
+        .modal-footer {
+            padding: 16px 26px 22px;
+            border-top: 1px solid rgba(255, 255, 255, .06);
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+        }
+        
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 11px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: .88rem;
+            cursor: pointer;
+            transition: all .2s;
+            border: none;
+            flex: 1;
+            justify-content: center;
+            min-width: 160px;
+        }
+        
+        .btn-download:hover {
+            background: var(--gold-lt);
+            transform: translateY(-1px)
+        }
+        
+        .btn-modal-close {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--gray);
+            border: 1px solid rgba(255, 255, 255, .1);
+            padding: 11px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: .88rem;
+            cursor: pointer;
+            transition: all .2s;
+            flex: 1;
+            justify-content: center;
+            min-width: 120px;
+        }
+        
+        .btn-modal-close:hover {
+            border-color: rgba(255, 255, 255, .25);
+            color: var(--white)
+        }
+        /* ============================================================
+   IMAGE ZOOM OVERLAY
+   Clicking the COA image in the modal shows it fullscreen.
+   ============================================================ */
+        
+        #zoom-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9500;
+            background: rgba(3, 9, 18, .96);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            cursor: zoom-out;
+        }
+        
+        #zoom-overlay.open {
+            display: flex
+        }
+        
+        #zoom-overlay img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 6px;
+            box-shadow: 0 0 80px rgba(0, 0, 0, .8);
+            animation: modalSlideUp .22s ease both;
+        }
+        
+        .zoom-close {
+            position: fixed;
+            top: 18px;
+            right: 22px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .2);
+            color: var(--white);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 9600;
+            transition: background .2s;
+        }
+        
+        .zoom-close:hover {
+            background: rgba(255, 255, 255, .2)
+        }
+        /* ── WHY CHOOSE ── */
+        
+        #why {
+            background: var(--navy)
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 48px
+        }
+        
+        .why-card {
+            border-left: 3px solid var(--gold);
+            padding: 24px 28px;
+            background: rgba(255, 255, 255, .02);
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+        
+        .why-num {
+            font-size: .72rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: .1em;
+            margin-bottom: 8px
+        }
+        
+        .why-title {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 6px
+        }
+        
+        .why-desc {
+            font-size: .85rem;
+            color: var(--gray);
+            line-height: 1.65
+        }
+        /* ── COA SECTION ── */
+        
+        #coa {
+            background: var(--navy2)
+        }
+        
+        .coa-inner {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            flex-wrap: wrap
+        }
+        
+        .coa-text {
+            flex: 1;
+            min-width: 280px
+        }
+        
+        .coa-visual {
+            flex: 1;
+            min-width: 280px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .coa-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, .06);
+            font-size: .88rem;
+        }
+        
+        .coa-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0
+        }
+        
+        .coa-row-label {
+            color: var(--gray)
+        }
+        
+        .coa-row-val {
+            font-weight: 600;
+            color: var(--ice)
+        }
+        
+        .coa-row-pass {
+            color: var(--green);
+            font-weight: 600;
+            font-size: .8rem
+        }
+        /* ── WHOLESALE ── */
+        
+        #wholesale {
+            background: linear-gradient(135deg, #0D1B2A 0%, #162338 100%);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .wholesale-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center
+        }
+        
+        .vol-tiers {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 32px
+        }
+        
+        .tier {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: var(--radius);
+        }
+        
+        .tier-qty {
+            font-weight: 600;
+            font-size: .9rem
+        }
+        
+        .tier-disc {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: .9rem;
+            background: rgba(201, 152, 42, .1);
+            padding: 3px 12px;
+            border-radius: 20px
+        }
+        
+        .wholesale-contact {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px
+        }
+        
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(201, 152, 42, .1);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-label {
+            font-size: .75rem;
+            color: var(--gray);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: .06em
+        }
+        
+        .contact-val {
+            font-weight: 600;
+            font-size: .95rem
+        }
+        /* ── ABOUT ── */
+        
+        #about {
+            background: var(--navy)
+        }
+        
+        .about-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px
+        }
+        
+        .stat-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px
+        }
+        
+        .stat-num {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold)
+        }
+        
+        .stat-lbl {
+            font-size: .8rem;
+            color: var(--gray);
+            margin-top: 2px
+        }
+        /* ── DISCLAIMER BAR ── */
+        
+        .disclaimer-bar {
+            background: rgba(201, 152, 42, .07);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 24px;
+            text-align: center;
+            font-size: .78rem;
+            color: var(--gray);
+        }
+        
+        .disclaimer-bar strong {
+            color: var(--gold-lt)
+        }
+        /* ── FOOTER ── */
+        
+        footer {
+            background: #080F1A;
+            border-top: 1px solid var(--border);
+            padding: 60px 24px 30px
+        }
+        
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto
+        }
+        
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px
+        }
+        
+        .footer-brand p {
+            color: var(--gray);
+            font-size: .88rem;
+            margin-top: 14px;
+            line-height: 1.7;
+            max-width: 280px
+        }
+        
+        .footer-col h4 {
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px
+        }
+        
+        .footer-col a {
+            display: block;
+            font-size: .85rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+            transition: color var(--transition)
+        }
+        
+        .footer-col a:hover {
+            color: var(--white)
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: .78rem;
+            color: var(--gray);
+        }
+        /* ── FLOATING WHATSAPP ── */
+        
+        .wa-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, .4);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        
+        .wa-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(37, 211, 102, .55)
+        }
+        
+        .wa-float svg {
+            width: 28px;
+            height: 28px;
+            fill: white
+        }
+        /* ── FAQ ── */
+        
+        #faq {
+            background: var(--navy2)
+        }
+        
+        .faq-list {
+            margin-top: 44px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px
+        }
+        
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden
+        }
+        
+        .faq-q {
+            padding: 20px 24px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color var(--transition)
+        }
+        
+        .faq-q:hover {
+            color: var(--gold)
+        }
+        
+        .faq-q .arrow {
+            transition: transform .2s;
+            font-size: .85rem;
+            color: var(--gray)
+        }
+        
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s ease
+        }
+        
+        .faq-a.open {
+            max-height: 300px
+        }
+        
+        .faq-a-inner {
+            padding: 0 24px 20px;
+            color: var(--gray);
+            font-size: .9rem;
+            line-height: 1.7
+        }
+        
+        .faq-item.open .faq-q {
+            color: var(--gold)
+        }
+        
+        .faq-item.open .arrow {
+            transform: rotate(180deg);
+            color: var(--gold)
+        }
+        /* ── RESPONSIVE ── */
+        
+        @media(max-width:900px) {
+            .footer-top {
+                grid-template-columns: 1fr 1fr
+            }
+            .wholesale-inner {
+                grid-template-columns: 1fr
+            }
+            .about-inner {
+                grid-template-columns: 1fr
+            }
+            .nav-links {
+                display: none
+            }
+            .hamburger {
+                display: flex
+            }
+            .theme-toggle {
+                display: flex
+            }
+        }
+        
+        @media(max-width:680px) {
+            .product-grid {
+                grid-template-columns: 1fr 1fr
+            }
+            .modal-footer {
+                flex-direction: column
+            }
+            .btn-download,
+            .btn-modal-close {
+                min-width: unset;
+                width: 100%
+            }
+        }
+        
+        @media(max-width:480px) {
+            .product-grid {
+                grid-template-columns: 1fr
+            }
+            .footer-top {
+                grid-template-columns: 1fr
+            }
+            .trust-badges {
+                gap: 10px
+            }
+            .badge {
+                font-size: .75rem;
+                padding: 8px 13px
+            }
+            .stat-grid {
+                grid-template-columns: 1fr
+            }
+        }
+        /* ============================================================
+           ADMIN — nav link, login modal, dashboard, file picker fields
+           ============================================================ */
+        .nav-admin-link{
+            display:inline-flex;align-items:center;gap:6px;
+            font-size:.85rem;font-weight:500;color:var(--gray);
+            cursor:pointer;transition:color var(--transition);
+            letter-spacing:.02em;text-transform:uppercase;
+            background:none;border:none;padding:0;font-family:inherit;
+        }
+        .nav-admin-link:hover{color:var(--gold)}
+
+        #admin-login-modal, #admin-panel{
+            display:none;position:fixed;inset:0;z-index:9700;
+            background:rgba(5,12,22,.92);
+            backdrop-filter:blur(10px);
+            align-items:center;justify-content:center;
+            padding:20px;opacity:0;transition:opacity .25s ease;
+        }
+        #admin-login-modal.open, #admin-panel.open{display:flex;opacity:1}
+
+        @keyframes adminSlideUp{
+            from{transform:translateY(24px);opacity:0}
+            to{transform:translateY(0);opacity:1}
+        }
+
+        .admin-login-box{
+            background:var(--card-bg);border:1px solid var(--border);
+            border-radius:16px;width:100%;max-width:380px;padding:34px 30px;
+            animation:adminSlideUp .28s ease both;
+            box-shadow:0 32px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(201,152,42,.1);
+            position:relative;
+        }
+        .admin-modal-close{
+            position:absolute;top:16px;right:16px;
+            width:34px;height:34px;border-radius:8px;
+            background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+            color:var(--gray);font-size:1.05rem;
+            display:flex;align-items:center;justify-content:center;
+            cursor:pointer;transition:all .2s;line-height:1;
+        }
+        .admin-modal-close:hover{background:rgba(255,255,255,.12);color:var(--white)}
+        .admin-login-title{
+            font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.3rem;
+            margin-bottom:4px;display:flex;align-items:center;gap:8px;
+        }
+        .admin-login-sub{font-size:.83rem;color:var(--gray);margin-bottom:24px}
+        .admin-field{margin-bottom:16px}
+        .admin-field label{
+            display:block;font-size:.75rem;font-weight:600;letter-spacing:.06em;
+            text-transform:uppercase;color:var(--gray);margin-bottom:7px;
+        }
+        .admin-field input, .admin-field textarea{
+            width:100%;padding:11px 14px;border-radius:8px;
+            background:rgba(255,255,255,.04);
+            border:1px solid rgba(255,255,255,.1);
+            color:var(--white);font-size:.92rem;font-family:inherit;
+            transition:border-color .2s;
+        }
+        .admin-field input:focus, .admin-field textarea:focus{outline:none;border-color:var(--gold)}
+        .admin-error{font-size:.8rem;color:#f06a6a;margin-bottom:14px;display:none}
+        .admin-error.show{display:block}
+        .btn-admin-submit{
+            width:100%;background:var(--gold);color:var(--navy);
+            padding:12px;border-radius:8px;font-weight:700;font-size:.92rem;
+            border:none;cursor:pointer;transition:background .2s;
+        }
+        .btn-admin-submit:hover{background:var(--gold-lt)}
+        .admin-hint{margin-top:18px;font-size:.72rem;color:var(--gray);text-align:center;line-height:1.6}
+
+        /* Admin dashboard */
+        .admin-dialog{
+            background:var(--card-bg);border:1px solid var(--border);
+            border-radius:16px;width:100%;max-width:1000px;max-height:90vh;
+            display:flex;flex-direction:column;overflow:hidden;
+            animation:adminSlideUp .28s ease both;
+            box-shadow:0 32px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(201,152,42,.1);
+        }
+        .admin-header{
+            display:flex;align-items:center;justify-content:space-between;
+            padding:20px 26px;border-bottom:1px solid rgba(255,255,255,.06);
+            flex-shrink:0;flex-wrap:wrap;gap:10px;
+        }
+        .admin-header-title{
+            font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.2rem;
+            display:flex;align-items:center;gap:8px;
+        }
+        .admin-header-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+        .btn-admin-logout{
+            background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+            color:var(--gray);padding:8px 16px;border-radius:7px;
+            font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s;
+        }
+        .btn-admin-logout:hover{color:var(--white);border-color:rgba(255,255,255,.25)}
+        .btn-admin-add{
+            background:var(--gold);color:var(--navy);
+            padding:9px 18px;border-radius:7px;font-size:.82rem;font-weight:700;
+            border:none;cursor:pointer;transition:background .2s;
+            display:inline-flex;align-items:center;gap:6px;
+        }
+        .btn-admin-add:hover{background:var(--gold-lt)}
+        .admin-body{flex:1;overflow-y:auto;padding:22px 26px}
+        .admin-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px}
+        .admin-table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:680px}
+        .admin-table th{
+            text-align:left;padding:12px 16px;background:rgba(201,152,42,.07);
+            color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.06em;
+            text-transform:uppercase;border-bottom:1px solid var(--border);white-space:nowrap;
+        }
+        .admin-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:middle}
+        .admin-table tr:last-child td{border-bottom:none}
+        .admin-table-thumb{width:46px;height:46px;border-radius:6px;object-fit:cover;background:rgba(255,255,255,.05);flex-shrink:0}
+        .admin-row-name{font-weight:600;color:var(--ice)}
+        .admin-row-actions{display:flex;gap:8px;white-space:nowrap}
+        .btn-row-edit, .btn-row-delete{
+            padding:6px 13px;border-radius:6px;font-size:.74rem;font-weight:600;
+            cursor:pointer;border:1px solid;transition:all .2s;
+        }
+        .btn-row-edit{background:rgba(201,152,42,.08);border-color:rgba(201,152,42,.3);color:var(--gold-lt)}
+        .btn-row-edit:hover{background:rgba(201,152,42,.18);color:var(--gold)}
+        .btn-row-delete{background:rgba(240,106,106,.08);border-color:rgba(240,106,106,.3);color:#f06a6a}
+        .btn-row-delete:hover{background:rgba(240,106,106,.18)}
+        .admin-empty-note{font-size:.8rem;color:var(--gray);margin-top:14px;line-height:1.6}
+
+        #admin-form-wrap{display:none;margin-top:22px}
+        #admin-form-wrap.show{display:block}
+        .admin-form-title{
+            font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.05rem;
+            margin-bottom:18px;display:flex;align-items:center;gap:8px;
+        }
+        .admin-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+        .admin-form-grid .admin-field{margin-bottom:0}
+        .admin-form-actions{display:flex;gap:10px;margin-top:6px;flex-wrap:wrap}
+        .btn-form-save{
+            background:var(--gold);color:var(--navy);padding:10px 22px;
+            border-radius:7px;font-weight:700;font-size:.85rem;border:none;
+            cursor:pointer;transition:background .2s;
+        }
+        .btn-form-save:hover{background:var(--gold-lt)}
+        .btn-form-cancel{
+            background:transparent;color:var(--gray);border:1px solid rgba(255,255,255,.1);
+            padding:10px 22px;border-radius:7px;font-weight:600;font-size:.85rem;
+            cursor:pointer;transition:all .2s;
+        }
+        .btn-form-cancel:hover{color:var(--white);border-color:rgba(255,255,255,.25)}
+        .admin-form-note{font-size:.74rem;color:var(--gray);margin-top:10px;line-height:1.6}
+
+        /* ── File-picker fields (image / PDF) — gallery upload OR URL ── */
+        .admin-file-field{
+            border:1px dashed rgba(255,255,255,.15);
+            border-radius:8px;padding:12px;
+            background:rgba(255,255,255,.02);
+        }
+        .admin-file-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+        .btn-file-pick{
+            display:inline-flex;align-items:center;gap:7px;
+            background:rgba(201,152,42,.1);border:1px solid rgba(201,152,42,.3);
+            color:var(--gold-lt);padding:9px 14px;border-radius:7px;
+            font-size:.78rem;font-weight:600;cursor:pointer;transition:all .2s;
+            white-space:nowrap;
+        }
+        .btn-file-pick:hover{background:rgba(201,152,42,.2);color:var(--gold)}
+        .admin-file-row input[type="text"]{
+            flex:1;min-width:140px;padding:9px 12px;border-radius:7px;
+            background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+            color:var(--white);font-size:.82rem;font-family:inherit;
+        }
+        .admin-file-row input[type="text"]:focus{outline:none;border-color:var(--gold)}
+        .admin-file-preview{
+            margin-top:10px;display:none;align-items:center;gap:10px;
+            font-size:.78rem;color:var(--gray);
+        }
+        .admin-file-preview.show{display:flex}
+        .admin-file-preview img{
+            width:44px;height:44px;border-radius:6px;object-fit:cover;
+            border:1px solid rgba(255,255,255,.1);
+        }
+        .admin-file-preview .pdf-chip{
+            width:44px;height:44px;border-radius:6px;
+            background:rgba(201,152,42,.12);border:1px solid var(--border);
+            display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+        }
+        .admin-file-clear{
+            background:none;border:none;color:var(--gray);cursor:pointer;
+            font-size:.8rem;text-decoration:underline;margin-left:auto;
+        }
+        .admin-file-clear:hover{color:#f06a6a}
+
+        @media(max-width:680px){
+            .admin-form-grid{grid-template-columns:1fr}
+            .admin-header{padding:16px 18px}
+            .admin-body{padding:16px 18px}
+            .admin-login-box{padding:28px 22px}
+            .admin-file-row{flex-direction:column;align-items:stretch}
+            .btn-file-pick{justify-content:center}
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================
+      NAVIGATION
+      ============================================================ -->
+    <nav>
+        <div class="nav-inner">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" />
+                <span>PEPTIVALORD</span>
+            </div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#products">Products</a>
+                    <a href="#coa">COA</a>
+                    <a href="#wholesale">Wholesale</a>
+                    <a href="#about">About</a>
+                    <a href="#faq">FAQ</a>
+                    <button class="nav-admin-link" onclick="openAdminLogin()">🔒 Admin</button>
+                </div>
+                <a href="https://wa.me/19175921215" target="_blank" rel="noopener" class="nav-cta"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" id="theme-toggle-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75zm0 12a4.5 4.5 0 1 0-4.5-4.5 4.505 4.505 0 0 0 4.5 4.5zm0 2a6.5 6.5 0 1 0-6.5-6.5 6.5 6.5 0 0 0 6.5 6.5z"/><circle cx="12" cy="12" r="4.5"/></svg>
+            </button>
+        </div>
+        <div id="mobile-menu">
+            <a href="#products" onclick="toggleMenu()">Products</a>
+            <a href="#coa" onclick="toggleMenu()">COA</a>
+            <a href="#wholesale" onclick="toggleMenu()">Wholesale</a>
+            <a href="#about" onclick="toggleMenu()">About</a>
+            <a href="#faq" onclick="toggleMenu()">FAQ</a>
+            <a href="https://wa.me/19175921215" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp Us</a>
+            <button class="mobile-admin-link" onclick="toggleMenu();openAdminLogin()" style="padding:14px 24px;font-size:.9rem;font-weight:500;color:var(--gray);border-bottom:1px solid var(--border);background:none;border-top:none;border-left:none;border-right:none;width:100%;text-align:left;font-family:inherit;cursor:pointer;">🔒 Admin Login</button>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+     HERO
+     ============================================================ -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <div class="hero-eyebrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg> Premium Research Peptides — USA Stock
+            </div>
+            <h1>Science-Grade<br/>Peptides. <em>Zero</em><br/>Compromise.</h1>
+            <p class="hero-sub">99%+ purity, third-party tested, COA included with every batch. Serving researchers and labs worldwide with fast, discreet shipping.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/19175921215" target="_blank" rel="noopener" class="btn btn-primary"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Order via WhatsApp</a>
+                <a href="#products" class="btn btn-outline">Browse Products</a>
+            </div>
+            <div class="trust-badges">
+                <div class="badge"><span class="badge-icon">🧪</span> 99%+ Purity</div>
+                <div class="badge"><span class="badge-icon">📄</span> COAs Included</div>
+                <div class="badge"><span class="badge-icon">🇺🇸</span> USA Stock</div>
+                <div class="badge"><span class="badge-icon">🌍</span> Worldwide Shipping</div>
+                <div class="badge"><span class="badge-icon">💬</span> Bulk &amp; Retail</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── DISCLAIMER BAR ── -->
+    <div class="disclaimer-bar">
+        <strong>Research Use Only.</strong> All Peptiva Lord products are sold strictly for laboratory and analytical research. Not intended for human consumption, animal use, or therapeutic applications.
+    </div>
+
+    <!-- ============================================================
+     PRODUCTS SECTION
+     ============================================================ -->
+    <section id="products">
+        <div class="section-inner">
+            <p class="section-label">Catalog</p>
+            <h2 class="section-title">Research Categories</h2>
+            <p class="section-desc">Every compound is batch-tested by independent third-party laboratories. COA delivered with each order.</p>
+
+            <div class="cat-grid">
+                <div class="cat-card">
+                    <div class="cat-icon">⚡</div>
+                    <div class="cat-name">GLP-1 / Metabolic Research</div>
+                    <div class="cat-items">Retatrutide · Tirzepatide · Semaglutide · Cagrilintide</div>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">🔬</div>
+                    <div class="cat-name">Tissue Repair &amp; Regeneration</div>
+                    <div class="cat-items">BPC-157 · TB-500 · GHK-CU</div>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">🧠</div>
+                    <div class="cat-name">Cognitive &amp; Neurological</div>
+                    <div class="cat-items">Semax · Adamax · DSIP</div>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">📈</div>
+                    <div class="cat-name">Growth Hormone Research</div>
+                    <div class="cat-items">CJC-1295 · Ipamorelin · Tesamorelin · PEG-MGF</div>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">🔗</div>
+                    <div class="cat-name">Peptide Blends</div>
+                    <div class="cat-items">CJC-1295 + IPA · BPC-157 + TB-500</div>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">🌟</div>
+                    <div class="cat-name">Longevity &amp; Cellular</div>
+                    <div class="cat-items">NAD+ · MOTS-C · PT-141</div>
+                </div>
+            </div>
+
+            <!-- ──────────────────────────────────────────────────────────
+         FEATURED PRODUCTS GRID
+         
+         HOW TO ADD A NEW PRODUCT:
+         1. Copy one <div class="product-card"> block below.
+         2. Update  data-name, data-lot, data-purity  attributes.
+         3. Set  data-coa-img  → path to your COA image   (coa/yourproduct.jpg)
+         4. Set  data-coa-pdf  → path to your COA PDF     (pdfs/yourproduct.pdf)
+         5. Set  data-img      → path to your product image (images/yourproduct.jpg)
+         6. Update the WhatsApp href text.
+         7. Done — JS wires everything up automatically.
+         ────────────────────────────────────────────────────────── -->
+            <p class="section-label" style="margin-top:64px">Featured</p>
+            <h2 class="section-title">Available Now</h2>
+
+            <div class="product-grid" id="product-grid">
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 1 — RETATRUTIDE
+           Image:   images/retatrutide.jpg
+           COA img: coa/retatrutide.jpg
+           COA PDF: pdfs/retatrutide.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="Retatrutide 10mg" data-lot="PL-2024-0182" data-purity="99.4%" data-img="images/retatrutide.jpg" data-coa-img="coa/retatrutide.jpg" data-coa-pdf="pdfs/retatrutide.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P1.jpg" alt="Retatrutide 10mg" loading="lazy" />
+                        <div class="prod-badge">🔥 Top Seller</div>
+                        <div class="prod-category">GLP-1 / Metabolic</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">Retatrutide 10mg</div>
+                        <div class="prod-purity">Purity: 99.4% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in Retatrutide 10mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 2 — TIRZEPATIDE
+           Image:   images/tirzepatide.jpg
+           COA img: coa/tirzepatide.jpg
+           COA PDF: pdfs/tirzepatide.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="Tirzepatide 10mg" data-lot="PL-2024-0195" data-purity="99.2%" data-img="images/tirzepatide.jpg" data-coa-img="coa/tirzepatide.jpg" data-coa-pdf="pdfs/tirzepatide.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P2.jpg" alt="Tirzepatide 10mg" loading="lazy" />
+                        <div class="prod-badge">🔥 Top Seller</div>
+                        <div class="prod-category">GLP-1 / Metabolic</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">Tirzepatide 10mg</div>
+                        <div class="prod-purity">Purity: 99.2% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in Tirzepatide 10mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 3 — SEMAGLUTIDE
+           Image:   images/semaglutide.jpg
+           COA img: coa/semaglutide.jpg
+           COA PDF: pdfs/semaglutide.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="Semaglutide 5mg" data-lot="PL-2024-0210" data-purity="99.1%" data-img="images/semaglutide.jpg" data-coa-img="coa/semaglutide.jpg" data-coa-pdf="pdfs/semaglutide.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P3.jpg" alt="Semaglutide 5mg" loading="lazy" />
+                        <div class="prod-badge">⭐ Popular</div>
+                        <div class="prod-category">GLP-1 / Metabolic</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">Semaglutide 5mg</div>
+                        <div class="prod-purity">Purity: 99.1% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in Semaglutide 5mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 4 — BPC-157
+           Image:   images/bpc157.jpg
+           COA img: coa/bpc157.jpg
+           COA PDF: pdfs/bpc157.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="BPC-157 5mg" data-lot="PL-2024-0228" data-purity="99.3%" data-img="images/bpc157.jpg" data-coa-img="coa/bpc157.jpg" data-coa-pdf="pdfs/bpc157.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P4.jpg" alt="BPC-157 5mg" loading="lazy" />
+                        <div class="prod-badge">⭐ Popular</div>
+                        <div class="prod-category">Tissue Repair</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">BPC-157 5mg</div>
+                        <div class="prod-purity">Purity: 99.3% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in BPC-157 5mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 5 — GHK-CU
+           Image:   images/ghkcu.jpg
+           COA img: coa/ghkcu.jpg
+           COA PDF: pdfs/ghkcu.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="GHK-CU 50mg" data-lot="PL-2024-0241" data-purity="99.5%" data-img="images/ghkcu.jpg" data-coa-img="coa/ghkcu.jpg" data-coa-pdf="pdfs/ghkcu.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P5.jpg" alt="GHK-CU 50mg" loading="lazy" />
+                        <div class="prod-category">Tissue Repair</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">GHK-CU 50mg</div>
+                        <div class="prod-purity">Purity: 99.5% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in GHK-CU 50mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 6 — NAD+
+           Image:   images/nad.jpg
+           COA img: coa/nad.jpg
+           COA PDF: pdfs/nad.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="NAD+ 500mg" data-lot="PL-2024-0255" data-purity="99.6%" data-img="images/nad.jpg" data-coa-img="coa/nad.jpg" data-coa-pdf="pdfs/nad.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P6.jpg" alt="NAD+ 500mg" loading="lazy" />
+                        <div class="prod-category">Longevity</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">NAD+ 500mg</div>
+                        <div class="prod-purity">Purity: 99.6% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in NAD+ 500mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 7 — MOTS-C
+           Image:   images/motsc.jpg
+           COA img: coa/motsc.jpg
+           COA PDF: pdfs/motsc.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="MOTS-C 10mg" data-lot="PL-2024-0263" data-purity="99.0%" data-img="images/motsc.jpg" data-coa-img="coa/motsc.jpg" data-coa-pdf="pdfs/motsc.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P7.jpg" alt="MOTS-C 10mg" loading="lazy" />
+                        <div class="prod-category">Longevity</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">MOTS-C 10mg</div>
+                        <div class="prod-purity">Purity: 99.0% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in MOTS-C 10mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 8 — PT-141
+           Image:   images/pt141.jpg
+           COA img: coa/pt141.jpg
+           COA PDF: pdfs/pt141.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="PT-141 10mg" data-lot="PL-2024-0277" data-purity="99.2%" data-img="images/pt141.jpg" data-coa-img="coa/pt141.jpg" data-coa-pdf="pdfs/pt141.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P8.jpg" alt="PT-141 10mg" loading="lazy" />
+                        <div class="prod-category">Longevity</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">PT-141 10mg</div>
+                        <div class="prod-purity">Purity: 99.2% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in PT-141 10mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 9 — SEMAX / ADAMAX
+           Image:   images/semax.jpg
+           COA img: coa/semax.jpg
+           COA PDF: pdfs/semax.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="Semax / Adamax 30mg" data-lot="PL-2024-0289" data-purity="99.1%" data-img="images/semax.jpg" data-coa-img="coa/semax.jpg" data-coa-pdf="pdfs/semax.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P9.jpg" alt="Semax / Adamax 30mg" loading="lazy" />
+                        <div class="prod-category">Cognitive</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">Semax / Adamax 30mg</div>
+                        <div class="prod-purity">Purity: 99.1% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in Semax/Adamax 30mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 10 — CJC-1295 + IPA BLEND
+           Image:   images/cjcipa.jpg
+           COA img: coa/cjcipa.jpg
+           COA PDF: pdfs/cjcipa.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="CJC-1295 + IPA Blend" data-lot="PL-2024-0301" data-purity="99.0%" data-img="images/cjcipa.jpg" data-coa-img="coa/cjcipa.jpg" data-coa-pdf="pdfs/cjcipa.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P10.jpg" alt="CJC-1295 + IPA Blend" loading="lazy" />
+                        <div class="prod-category">GH / Blends</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">CJC-1295 + IPA Blend</div>
+                        <div class="prod-purity">Purity: 99.0% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in CJC-1295+IPA Blend" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 11 — TESAMORELIN
+           Image:   images/tesamorelin.jpg
+           COA img: coa/tesamorelin.jpg
+           COA PDF: pdfs/tesamorelin.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="Tesamorelin 2mg" data-lot="PL-2024-0315" data-purity="99.3%" data-img="images/tesamorelin.jpg" data-coa-img="coa/tesamorelin.jpg" data-coa-pdf="pdfs/tesamorelin.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P11.jpg" alt="Tesamorelin 2mg" loading="lazy" />
+                        <div class="prod-category">Growth Hormone</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">Tesamorelin 2mg</div>
+                        <div class="prod-purity">Purity: 99.3% | Lyophilized</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in Tesamorelin 2mg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ══════════════════════════════════════════
+           PRODUCT 12 — BAC WATER
+           Image:   images/bacwater.jpg
+           COA img: coa/bacwater.jpg
+           COA PDF: pdfs/bacwater.pdf
+           ══════════════════════════════════════════ -->
+                <div class="product-card" data-name="BAC Water 30mL" data-lot="PL-2024-0329" data-purity="Research Grade" data-img="images/bacwater.jpg" data-coa-img="coa/bacwater.jpg" data-coa-pdf="pdfs/bacwater.pdf">
+
+                    <div class="prod-img-wrap">
+                        <div class="prod-img-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+                            <span>Product Image</span>
+                        </div>
+                        <img src="images/P12.jpg" alt="BAC Water 30mL" loading="lazy" />
+                        <div class="prod-category">Lab Supplies</div>
+                    </div>
+
+                    <div class="prod-body">
+                        <div class="prod-name">BAC Water 30mL</div>
+                        <div class="prod-purity">Bacteriostatic | Research Grade</div>
+                        <div class="prod-actions">
+                            <button class="btn-coa" onclick="openCOA(this.closest('.product-card'))">📄 View COA</button>
+                            <a class="btn-wa" href="https://wa.me/19175921215?text=I'm interested in BAC Water 30mL" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /product-grid -->
+        </div>
+    </section>
+
+    <!-- ── WHY CHOOSE ── -->
+    <section id="why">
+        <div class="section-inner">
+            <p class="section-label">Why Peptiva Lord</p>
+            <h2 class="section-title">Built for Researchers</h2>
+            <p class="section-desc">We supply compounds that meet the standards serious research demands — not corner-cut alternatives.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-num">01</div>
+                    <div class="why-title">Third-Party Lab Verified</div>
+                    <div class="why-desc">Every batch tested by independent ISO-certified laboratories. COAs document purity, identity, and lot number for full traceability.</div>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">02</div>
+                    <div class="why-title">USA-Stocked, Ships Fast</div>
+                    <div class="why-desc">Domestic inventory means no long waits. Orders dispatched promptly with discreet, secure packaging for worldwide delivery.</div>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">03</div>
+                    <div class="why-title">Transparent &amp; Reliable</div>
+                    <div class="why-desc">We publish what's in every vial and stand behind it. No bait-and-switch pricing, no hidden fees, no compromises on quality.</div>
+                </div>
+                <div class="why-card">
+                    <div class="why-num">04</div>
+                    <div class="why-title">Responsive Support</div>
+                    <div class="why-desc">Real people, real answers. Reach us via WhatsApp for quotes, bulk orders, COA requests, or any research question — fast turnaround guaranteed.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── COA SECTION ── -->
+    <section id="coa">
+        <div class="section-inner">
+            <div class="coa-inner">
+                <div class="coa-text">
+                    <p class="section-label">Quality Assurance</p>
+                    <h2 class="section-title">Certificates of Analysis</h2>
+                    <p class="section-desc">Every Peptiva Lord product ships with a batch-specific Certificate of Analysis from an independent third-party laboratory. We test for purity, identity, residual solvents, and endotoxins. No batch ships without passing all criteria.</p>
+                    <div style="margin-top:32px;display:flex;flex-direction:column;gap:12px">
+                        <div style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--ice)">
+                            <span style="color:var(--gold)">✓</span> HPLC purity testing — target ≥99%
+                        </div>
+                        <div style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--ice)">
+                            <span style="color:var(--gold)">✓</span> Mass spectrometry identity confirmation
+                        </div>
+                        <div style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--ice)">
+                            <span style="color:var(--gold)">✓</span> Lot number tracking for every batch
+                        </div>
+                        <div style="display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--ice)">
+                            <span style="color:var(--gold)">✓</span> COA included or available upon request
+                        </div>
+                    </div>
+                    <a href="https://wa.me/19175921215?text=I'd like to request a COA" target="_blank" class="btn btn-primary" style="margin-top:30px;display:inline-flex"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Request a COA</a>
+                </div>
+                <div class="coa-visual">
+                    <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px">Sample COA Summary</div>
+                    <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:18px;border-bottom:1px solid var(--border);padding-bottom:14px">Retatrutide 10mg — Lot #PL-2024-0182</div>
+                    <div class="coa-row"><span class="coa-row-label">Appearance</span><span class="coa-row-val">White lyophilized powder</span></div>
+                    <div class="coa-row"><span class="coa-row-label">Purity (HPLC)</span><span class="coa-row-val">99.4% <span class="coa-row-pass">✓ PASS</span></span>
+                    </div>
+                    <div class="coa-row"><span class="coa-row-label">Identity (MS)</span><span class="coa-row-val">Confirmed <span class="coa-row-pass">✓ PASS</span></span>
+                    </div>
+                    <div class="coa-row"><span class="coa-row-label">Molecular Weight</span><span class="coa-row-val">4814.5 Da</span></div>
+                    <div class="coa-row"><span class="coa-row-label">Form</span><span class="coa-row-val">Lyophilized</span></div>
+                    <div class="coa-row"><span class="coa-row-label">Testing Lab</span><span class="coa-row-val">Independent ISO-Certified</span></div>
+                    <div class="coa-row"><span class="coa-row-label">Research Use Only</span><span class="coa-row-val">⚠ Not for human use</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── WHOLESALE ── -->
+    <section id="wholesale">
+        <div class="section-inner">
+            <div class="wholesale-inner">
+                <div>
+                    <p class="section-label">Bulk Purchasing</p>
+                    <h2 class="section-title">Wholesale &amp; Volume Orders</h2>
+                    <p class="section-desc">Supplying clinics, research institutions, and distributors worldwide. Volume discounts available starting at 10 vials per SKU.</p>
+                    <div class="vol-tiers">
+                        <div class="tier">
+                            <div class="tier-qty">10–24 vials / product</div>
+                            <div class="tier-disc">Volume Pricing</div>
+                        </div>
+                        <div class="tier">
+                            <div class="tier-qty">25–49 vials / product</div>
+                            <div class="tier-disc">Enhanced Discount</div>
+                        </div>
+                        <div class="tier">
+                            <div class="tier-qty">50+ vials / product</div>
+                            <div class="tier-disc">Best Rate — Custom Quote</div>
+                        </div>
+                    </div>
+                    <p style="margin-top:18px;font-size:.82rem;color:var(--gray)">Contact us via WhatsApp for a custom wholesale quote tailored to your order volume and product mix.</p>
+                </div>
+                <div class="wholesale-contact">
+                    <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:6px">Get a Wholesale Quote</div>
+                    <p style="font-size:.85rem;color:var(--gray);margin-bottom:8px">Reach out directly — we respond fast.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+                        <div>
+                            <div class="contact-label">WhatsApp</div>
+                            <a href="https://wa.me/19175921215" target="_blank" class="contact-val" style="color:var(--white)">+1 (917) 592-1215</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:drmarcusreid7@gmail.com" class="contact-val" style="color:var(--white)">drmarcusreid7@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌍</div>
+                        <div>
+                            <div class="contact-label">Shipping</div>
+                            <div class="contact-val">Worldwide — Discreet Packaging</div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/19175921215?text=I'd like to request a wholesale quote" target="_blank" class="btn btn-primary" style="margin-top:10px;justify-content:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Start Wholesale Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-inner">
+                <div>
+                    <p class="section-label">About Us</p>
+                    <h2 class="section-title">Who Is Peptiva Lord?</h2>
+                    <p style="color:var(--gray);line-height:1.8;font-size:.95rem;margin-top:16px">Peptiva Lord is a trusted supplier of high-quality research peptides sourced from ISO-certified laboratories. We test every batch for purity and identity before it reaches our inventory — because research depends on compounds you can
+                        trust.
+                    </p>
+                    <p style="color:var(--gray);line-height:1.8;font-size:.95rem;margin-top:16px">We serve researchers, academic institutions, and labs worldwide with fast, discreet shipping and responsive customer support. Our mission is to provide reliable, affordable, and transparent access to research compounds — with full
+                        documentation to back every claim.</p>
+                    <div style="margin-top:28px;padding:20px 24px;background:rgba(201,152,42,.06);border:1px solid var(--border);border-radius:var(--radius);font-size:.85rem;color:var(--gray);line-height:1.7">
+                        ⚠ <strong style="color:var(--ice)">Research Use Only.</strong> All compounds are intended strictly for laboratory and in-vitro research. They are not approved for human consumption, animal use, or therapeutic applications.
+                    </div>
+                </div>
+                <div>
+                    <div class="stat-grid">
+                        <div class="stat-box">
+                            <div class="stat-num">99%+</div>
+                            <div class="stat-lbl">Guaranteed purity on every batch</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">USA</div>
+                            <div class="stat-lbl">Domestic stock, fast dispatch</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">ISO</div>
+                            <div class="stat-lbl">Certified lab sourcing</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">🌍</div>
+                            <div class="stat-lbl">Worldwide shipping available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section id="faq">
+        <div class="section-inner">
+            <p class="section-label">FAQ</p>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">What is Peptiva Lord? <span class="arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Peptiva Lord is a U.S.-based research peptide supplier providing batch-tested compounds for laboratory and analytical research. Every product ships with a batch-specific Certificate of Analysis and research-use-only labeling.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Are these peptides for human use? <span class="arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">No. All Peptiva Lord peptides and compounds are sold strictly for laboratory and analytical research. They are not for human consumption, animal use, diagnostic procedures, or therapeutic applications.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">What purity standard do your peptides meet? <span class="arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Peptiva Lord peptides are batch-tested for 99%+ purity by independent third-party laboratories. The exact purity for each lot is documented in the batch-specific Certificate of Analysis (COA) provided with every order.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">How do I get a Certificate of Analysis? <span class="arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">A batch-specific COA is delivered with every order. You can also request a COA for any product before purchasing by contacting us via WhatsApp at +1 (917) 592-1215 or by email. Each product card on this page also has a "View COA"
+                            button that shows the latest available COA.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">How do I place an order? <span class="arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Contact us via WhatsApp (+1 917-592-1215) or email to submit your product inquiry and quantities. We'll send you an invoice, and your order ships once payment is confirmed — with the COA included.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Do you offer wholesale or bulk pricing? <span class="arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Yes. Volume discounts start at 10 vials per product. Contact us for a custom wholesale quote based on your order size and product mix. We supply researchers, clinics, and labs worldwide.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">Do you ship internationally? <span class="arrow">▾</span></div>
+                    <div class="faq-a">
+                        <div class="faq-a-inner">Yes. Peptiva Lord ships worldwide with discreet, secure packaging. Contact us with your destination for specific shipping timeframes and options.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact" style="background:var(--navy);padding:80px 24px">
+        <div class="section-inner" style="text-align:center">
+            <p class="section-label" style="justify-content:center;display:flex">Contact</p>
+            <h2 class="section-title" style="max-width:500px;margin:0 auto 16px">Ready to Order?</h2>
+            <p style="color:var(--gray);max-width:420px;margin:0 auto 40px;font-size:.95rem">Reach out for product inquiries, COA requests, bulk pricing, or any research question. We respond fast.</p>
+            <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap">
+                <a href="https://wa.me/19175921215" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1rem;padding:16px 36px"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp +1 (917) 592-1215</a>
+                <a href="mailto:drmarcusreid7@gmail.com" class="btn btn-outline" style="font-size:1rem;padding:16px 36px">📧 Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">Peptiva<span>Lord</span></div>
+                    <p>Premium research peptides — lab tested, COA included, shipped fast from USA stock to researchers worldwide.</p>
+                    <div style="margin-top:18px;display:flex;gap:12px">
+                        <a href="https://wa.me/19175921215" target="_blank" style="background:rgba(201,152,42,.1);border:1px solid var(--border);padding:8px 16px;border-radius:6px;font-size:.8rem;color:var(--gold);font-weight:600"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <a href="#products">GLP-1 / Metabolic</a>
+                    <a href="#products">Tissue Repair</a>
+                    <a href="#products">Cognitive &amp; Neuro</a>
+                    <a href="#products">Growth Hormone</a>
+                    <a href="#products">Longevity</a>
+                    <a href="#products">Lab Supplies</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#coa">COA Quality</a>
+                    <a href="#wholesale">Wholesale</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="https://wa.me/19175921215" target="_blank"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> +1 (917) 592-1215</a>
+                    <a href="mailto:drmarcusreid7@gmail.com">📧 drmarcusreid7@gmail.com</a>
+                    <a href="#contact">🌍 Worldwide Shipping</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2025 Peptiva Lord. All rights reserved.</div>
+                <div style="max-width:520px;text-align:right;font-size:.73rem;line-height:1.5">
+                    <strong style="color:var(--gold-lt)">Research Use Only.</strong> All products are sold for laboratory and analytical research purposes only. Not for human consumption, animal use, or therapeutic applications.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── FLOATING WHATSAPP ── -->
+    <a href="https://wa.me/19175921215" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- ============================================================
+     COA MODAL
+     Populated dynamically by openCOA() when a product card's
+     "View COA" button is clicked.
+     ============================================================ -->
+    <div id="coa-modal" role="dialog" aria-modal="true" aria-labelledby="modal-product-name">
+
+        <div class="modal-dialog">
+
+            <!-- Header -->
+            <div class="modal-header">
+                <div class="modal-header-left">
+                    <div class="modal-product-name" id="modal-product-name">—</div>
+                    <div class="modal-meta">
+                        <span class="modal-pill pill-coa-label">📄 Certificate of Analysis</span>
+                        <span class="modal-pill pill-lot" id="modal-lot">Lot #—</span>
+                        <span class="modal-pill pill-purity" id="modal-purity">Purity: —</span>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="closeCOA()" aria-label="Close">✕</button>
+            </div>
+
+            <!-- Scrollable body -->
+            <div class="modal-body">
+
+                <!-- COA image — clicking it triggers zoom overlay -->
+                <div class="coa-img-container" id="modal-img-container" onclick="openZoom()">
+                    <!-- Actual COA image (src set by JS) -->
+                    <img id="modal-coa-img" src="" alt="Certificate of Analysis" />
+                    <!-- Placeholder shown when no image is available -->
+                    <div class="coa-img-placeholder" id="modal-img-placeholder" style="display:none">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        <p>COA image not yet uploaded.<br/>
+                            <a href="https://wa.me/19175921215?text=Please send me the COA" target="_blank">Request via WhatsApp →</a>
+                        </p>
+                    </div>
+                    <div class="zoom-hint" id="zoom-hint">🔍 Click to zoom</div>
+                </div>
+
+                <!-- Key COA data rows -->
+                <div>
+                    <div class="coa-data-row">
+                        <span class="coa-data-label">Product Name</span>
+                        <span class="coa-data-val" id="modal-data-name">—</span>
+                    </div>
+                    <div class="coa-data-row">
+                        <span class="coa-data-label">Lot Number</span>
+                        <span class="coa-data-val" id="modal-data-lot">—</span>
+                    </div>
+                    <div class="coa-data-row">
+                        <span class="coa-data-label">Purity (HPLC)</span>
+                        <span class="coa-data-val" id="modal-data-purity">— <span class="coa-data-pass">✓ PASS</span></span>
+                    </div>
+                    <div class="coa-data-row">
+                        <span class="coa-data-label">Identity (MS)</span>
+                        <span class="coa-data-val">Confirmed <span class="coa-data-pass">✓ PASS</span></span>
+                    </div>
+                    <div class="coa-data-row">
+                        <span class="coa-data-label">Form</span>
+                        <span class="coa-data-val">Lyophilized powder</span>
+                    </div>
+                    <div class="coa-data-row">
+                        <span class="coa-data-label">Testing Lab</span>
+                        <span class="coa-data-val">Independent ISO-Certified</span>
+                    </div>
+                    <div class="coa-data-row">
+                        <span class="coa-data-label">Intended Use</span>
+                        <span class="coa-data-val" style="color:#f0a04b">⚠ Research Use Only</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /modal-body -->
+
+            <!-- Footer: Download PDF + Close -->
+            <div class="modal-footer">
+                <a id="modal-pdf-link" href="#" download class="btn-download">
+        ⬇ Download COA PDF
+      </a>
+                <button class="btn-modal-close" onclick="closeCOA()">✕ Close</button>
+            </div>
+
+        </div>
+        <!-- /modal-dialog -->
+    </div>
+    <!-- /coa-modal -->
+
+    <!-- ============================================================
+      ZOOM OVERLAY
+      Full-screen view of product/COA images.
+      Click anywhere (or × button) to dismiss.
+      ============================================================ -->
+    <div id="zoom-overlay" onclick="closeZoom()">
+        <button class="zoom-close" onclick="event.stopPropagation(); closeZoom()" aria-label="Close zoom">✕</button>
+        <img id="zoom-img" src="" alt="Image Zoomed" />
+    </div>
+
+    <!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+    <script>
+        /* ─────────────────────────────────────────────
+                                                                                                                                                                                   1. LAZY-LOAD PRODUCT IMAGES
+                                                                                                                                                                                   Each .product-card carries  data-img  with the
+                                                                                                                                                                                   path to its product photo.  We set the <img>
+                                                                                                                                                                                   src here and fade it in once it loads.
+                                                                                                                                                                                   ───────────────────────────────────────────── */
+        document.querySelectorAll('.product-card').forEach(function(card) {
+            var imgSrc = card.dataset.img;
+            var img = card.querySelector('.prod-img-wrap img');
+            var wrap = card.querySelector('.prod-img-wrap');
+            if (!imgSrc || !img) return;
+
+            img.src = imgSrc;
+            img.onload = function() {
+                img.classList.add('loaded');
+                // Hide the SVG placeholder once a real image loads
+                var ph = card.querySelector('.prod-img-placeholder');
+                if (ph) ph.style.display = 'none';
+            };
+            img.onerror = function() {
+                // Image file not found — placeholder stays visible
+                img.style.display = 'none';
+            };
+
+            // Click product image to open zoom overlay
+            wrap.addEventListener('click', function() {
+                openProductZoom(imgSrc);
+            });
+        });
+
+        /* ─────────────────────────────────────────────
+           2. COA MODAL
+           openCOA(cardEl) — reads data-* from the card
+           and populates the modal, then shows it.
+           ───────────────────────────────────────────── */
+        function openCOA(card) {
+            var name = card.dataset.name || 'Research Peptide';
+            var lot = card.dataset.lot || 'N/A';
+            var purity = card.dataset.purity || '99%+';
+            var coaImg = card.dataset.coaImg || '';
+            var coaPdf = card.dataset.coaPdf || '';
+
+            // Populate text fields
+            document.getElementById('modal-product-name').textContent = name;
+            document.getElementById('modal-lot').textContent = 'Lot #' + lot;
+            document.getElementById('modal-purity').textContent = 'Purity: ' + purity;
+            document.getElementById('modal-data-name').textContent = name;
+            document.getElementById('modal-data-lot').textContent = lot;
+            document.getElementById('modal-data-purity').innerHTML = purity + ' <span class="coa-data-pass">✓ PASS</span>';
+
+            // COA image
+            var imgEl = document.getElementById('modal-coa-img');
+            var placeholder = document.getElementById('modal-img-placeholder');
+            var zoomHint = document.getElementById('zoom-hint');
+            var container = document.getElementById('modal-img-container');
+
+            if (coaImg) {
+                imgEl.src = coaImg;
+                imgEl.style.display = 'block';
+                placeholder.style.display = 'none';
+                zoomHint.style.display = 'flex';
+                container.style.cursor = 'zoom-in';
+
+                imgEl.onerror = function() {
+                    imgEl.style.display = 'none';
+                    placeholder.style.display = 'flex';
+                    zoomHint.style.display = 'none';
+                    container.style.cursor = 'default';
+                };
+            } else {
+                imgEl.style.display = 'none';
+                placeholder.style.display = 'flex';
+                zoomHint.style.display = 'none';
+                container.style.cursor = 'default';
+            }
+
+            // PDF download link
+            var pdfLink = document.getElementById('modal-pdf-link');
+            if (coaPdf) {
+                pdfLink.href = coaPdf;
+                pdfLink.download = name.replace(/\s+/g, '_') + '_COA.pdf';
+                pdfLink.style.opacity = '1';
+                pdfLink.style.pointerEvents = 'auto';
+            } else {
+                pdfLink.href = '#';
+                pdfLink.style.opacity = '.4';
+                pdfLink.style.pointerEvents = 'none';
+            }
+
+            // Store current COA image path for the zoom overlay
+            document.getElementById('zoom-img').src = coaImg || '';
+
+            // Show the modal
+            var modal = document.getElementById('coa-modal');
+            modal.style.display = 'flex';
+            // Tiny delay so display:flex is painted before opacity transition
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    modal.classList.add('open');
+                });
+            });
+
+            // Prevent page scroll while modal is open
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCOA() {
+            var modal = document.getElementById('coa-modal');
+            modal.classList.remove('open');
+            // Wait for fade-out before hiding
+            setTimeout(function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 260);
+        }
+
+        // Close modal when clicking the dark backdrop (outside the dialog)
+        document.getElementById('coa-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeCOA();
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (document.getElementById('zoom-overlay').classList.contains('open')) {
+                    closeZoom();
+                } else {
+                    closeCOA();
+                }
+            }
+        });
+
+        /* ─────────────────────────────────────────────
+           3. ZOOM OVERLAY
+           Triggered by clicking the COA image inside
+           the modal.
+           ───────────────────────────────────────────── */
+        function openProductZoom(src) {
+            if (!src) return;
+            var overlay = document.getElementById('zoom-overlay');
+            document.getElementById('zoom-img').src = src;
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    overlay.classList.add('open');
+                });
+            });
+        }
+
+        function openZoom() {
+            var src = document.getElementById('modal-coa-img').src;
+            if (!src) return;
+            var overlay = document.getElementById('zoom-overlay');
+            document.getElementById('zoom-img').src = src;
+            overlay.style.display = 'flex';
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    overlay.classList.add('open');
+                });
+            });
+        }
+
+        function closeZoom() {
+            var overlay = document.getElementById('zoom-overlay');
+            overlay.classList.remove('open');
+            setTimeout(function() {
+                overlay.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 200);
+        }
+
+        /* ─────────────────────────────────────────────
+                    4. THEME TOGGLE
+                    ───────────────────────────────────────────── */
+        function toggleTheme() {
+            var root = document.documentElement;
+            var current = root.getAttribute('data-theme');
+            var btn = document.getElementById('theme-toggle-btn');
+            if (current === 'light') {
+                root.removeAttribute('data-theme');
+                btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/><path d="M12 2a1 1 0 0 0-1 1v3a1 1 0 0 0 2 0V3a1 1 0 0 0-1-1zm0 16a1 1 0 0 0-1-1v-3a1 1 0 0 0 2 0v3a1 1 0 0 0-1 1zM5.636 4.95a1 1 0 0 0 1.414 0l2.121-2.121a1 1 0 0 0-1.414-1.414l-2.121 2.121a1 1 0 0 0 0 1.414zm10.657 12.728a1 1 0 0 0 0-1.414l-2.121-2.121a1 1 0 0 0-1.414 1.414l2.121 2.121a1 1 0 0 0 1.414 0zm-12.728 0a1 1 0 0 0 0-1.414l2.121-2.121a1 1 0 0 0-1.414-1.414l-2.121 2.121a1 1 0 0 0 0 1.414zm14.879-2.828a1 1 0 0 0-1.414 0l-2.121 2.121a1 1 0 0 0 1.414 1.414l2.121-2.121a1 1 0 0 0 0-1.414z"/></svg>';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                root.setAttribute('data-theme', 'light');
+                btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/><path d="M12 2a1 1 0 0 0-1 1v3a1 1 0 0 0 2 0V3a1 1 0 0 0-1-1zm0 16a1 1 0 0 0-1-1v-3a1 1 0 0 0 2 0v3a1 1 0 0 0-1 1zM5.636 4.95a1 1 0 0 0 1.414 0l2.121-2.121a1 1 0 0 0-1.414-1.414l-2.121 2.121a1 1 0 0 0 0 1.414zm10.657 12.728a1 1 0 0 0 0-1.414l-2.121-2.121a1 1 0 0 0-1.414 1.414l2.121 2.121a1 1 0 0 0 1.414 0zm-12.728 0a1 1 0 0 0 0-1.414l2.121-2.121a1 1 0 0 0-1.414-1.414l-2.121 2.121a1 1 0 0 0 0 1.414zm14.879-2.828a1 1 0 0 0-1.414 0l-2.121 2.121a1 1 0 0 0 1.414 1.414l2.121-2.121a1 1 0 0 0 0-1.414z"/></svg>';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme on page load
+        (function() {
+            var savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                var btn = document.getElementById('theme-toggle-btn');
+                if (btn) btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/><path d="M12 2a1 1 0 0 0-1 1v3a1 1 0 0 0 2 0V3a1 1 0 0 0-1-1zm0 16a1 1 0 0 0-1-1v-3a1 1 0 0 0 2 0v3a1 1 0 0 0-1 1zM5.636 4.95a1 1 0 0 0 1.414 0l2.121-2.121a1 1 0 0 0-1.414-1.414l-2.121 2.121a1 1 0 0 0 0 1.414zm10.657 12.728a1 1 0 0 0 0-1.414l-2.121-2.121a1 1 0 0 0-1.414 1.414l2.121 2.121a1 1 0 0 0 1.414 0zm-12.728 0a1 1 0 0 0 0-1.414l2.121-2.121a1 1 0 0 0-1.414-1.414l-2.121 2.121a1 1 0 0 0 0 1.414zm14.879-2.828a1 1 0 0 0-1.414 0l-2.121 2.121a1 1 0 0 0 1.414 1.414l2.121-2.121a1 1 0 0 0 0-1.414z"/></svg>';
+            }
+        })();
+
+        /* ─────────────────────────────────────────────
+                    3. NAV / MOBILE MENU
+                    ───────────────────────────────────────────── */
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('open');
+        }
+        document.addEventListener('scroll', function() {
+            document.getElementById('mobile-menu').classList.remove('open');
+        }, {
+            passive: true
+        });
+
+        /* ─────────────────────────────────────────────
+                    4. FAQ ACCORDION
+                    ───────────────────────────────────────────── */
+        function toggleFaq(el) {
+            var item = el.closest('.faq-item');
+            var ans = item.querySelector('.faq-a');
+            var isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(function(i) {
+                i.classList.remove('open');
+                i.querySelector('.faq-a').classList.remove('open');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                ans.classList.add('open');
+            }
+        }
+
+        /* ============================================================
+           ADMIN SYSTEM
+           - Login modal (username/password check, client-side only)
+           - Session persisted in sessionStorage so it clears on tab close
+           - Product CRUD stored in localStorage, merged into #product-grid
+           - Image/PDF fields support BOTH a gallery/file picker (converted
+             to a data URL) AND a plain URL typed/pasted into the text field
+           ============================================================
+           ⚠ NOTE: This is a CLIENT-SIDE-ONLY login for convenience.
+           Anyone who reads the page source can see the credentials below.
+           For real security, replace this with a server-side login system.
+           ============================================================ */
+        var ADMIN_USERNAME = 'admin';
+        var ADMIN_PASSWORD = 'peptiva2024';
+        var ADMIN_SESSION_KEY = 'peptivaAdminLoggedIn';
+        var ADMIN_PRODUCTS_KEY = 'peptivaAdminProducts';
+
+        /* ---------- Login modal open/close ---------- */
+        function openAdminLogin() {
+            if (sessionStorage.getItem(ADMIN_SESSION_KEY) === 'true') {
+                openAdminPanel();
+                return;
+            }
+            var modal = document.getElementById('admin-login-modal');
+            document.getElementById('admin-login-error').classList.remove('show');
+            document.getElementById('admin-login-form').reset();
+            modal.style.display = 'flex';
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() { modal.classList.add('open'); });
+            });
+            document.body.style.overflow = 'hidden';
+        }
+        function closeAdminLogin() {
+            var modal = document.getElementById('admin-login-modal');
+            modal.classList.remove('open');
+            setTimeout(function() {
+                modal.style.display = 'none';
+                if (!document.getElementById('admin-panel').classList.contains('open')) {
+                    document.body.style.overflow = '';
+                }
+            }, 250);
+        }
+        document.getElementById('admin-login-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeAdminLogin();
+        });
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            var u = document.getElementById('admin-username').value.trim();
+            var p = document.getElementById('admin-password').value;
+            if (u === ADMIN_USERNAME && p === ADMIN_PASSWORD) {
+                sessionStorage.setItem(ADMIN_SESSION_KEY, 'true');
+                closeAdminLogin();
+                setTimeout(openAdminPanel, 260);
+            } else {
+                document.getElementById('admin-login-error').classList.add('show');
+            }
+            return false;
+        }
+
+        /* ---------- Admin dashboard panel open/close ---------- */
+        function openAdminPanel() {
+            renderAdminTable();
+            hideAdminForm();
+            var modal = document.getElementById('admin-panel');
+            modal.style.display = 'flex';
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() { modal.classList.add('open'); });
+            });
+            document.body.style.overflow = 'hidden';
+        }
+        function closeAdminPanel() {
+            var modal = document.getElementById('admin-panel');
+            modal.classList.remove('open');
+            setTimeout(function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 250);
+        }
+        document.getElementById('admin-panel').addEventListener('click', function(e) {
+            if (e.target === this) closeAdminPanel();
+        });
+        function adminLogout() {
+            sessionStorage.removeItem(ADMIN_SESSION_KEY);
+            closeAdminPanel();
+        }
+
+        /* ---------- Product storage helpers ---------- */
+        function getAdminProducts() {
+            try {
+                return JSON.parse(localStorage.getItem(ADMIN_PRODUCTS_KEY)) || [];
+            } catch (err) {
+                return [];
+            }
+        }
+        function setAdminProducts(list) {
+            try {
+                localStorage.setItem(ADMIN_PRODUCTS_KEY, JSON.stringify(list));
+            } catch (err) {
+                alert('Could not save: storage limit reached. Try using smaller images or pasting URLs instead of uploading large photos.');
+            }
+        }
+
+        /* ---------- Render admin table rows ---------- */
+        function renderAdminTable() {
+            var tbody = document.getElementById('admin-product-tbody');
+            var products = getAdminProducts();
+            if (products.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--gray);padding:24px">No admin-added products yet. Click "+ Add Product" to create one.</td></tr>';
+                return;
+            }
+            tbody.innerHTML = products.map(function(p) {
+                var thumb = p.img ? '<img class="admin-table-thumb" src="' + p.img + '" alt="" onerror="this.style.opacity=0.15" />' : '<div class="admin-table-thumb"></div>';
+                return '<tr>' +
+                    '<td>' + thumb + '</td>' +
+                    '<td class="admin-row-name">' + escapeHtml(p.name) + '</td>' +
+                    '<td>' + escapeHtml(p.lot || '—') + '</td>' +
+                    '<td>' + escapeHtml(p.purity || '—') + '</td>' +
+                    '<td>' + escapeHtml(p.category || '—') + '</td>' +
+                    '<td class="admin-row-actions">' +
+                    '<button class="btn-row-edit" onclick="editAdminProduct(\'' + p.id + '\')">Edit</button>' +
+                    '<button class="btn-row-delete" onclick="deleteAdminProduct(\'' + p.id + '\')">Delete</button>' +
+                    '</td>' +
+                    '</tr>';
+            }).join('');
+        }
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str).replace(/[&<>"']/g, function(c) {
+                return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+            });
+        }
+
+        /* ---------- File picker (gallery / file system) handling ----------
+           Each of the 3 fields (img, coaimg, coapdf) has:
+             - a hidden <input type="file"> triggered by "Choose..." button
+             - a visible <input type="text"> for pasting a URL instead
+             - a preview row showing whichever value is currently set
+           Picking a file converts it to a base64 data URL via FileReader
+           and writes that string into the matching text input, so saving
+           the form works identically whether the value came from the
+           gallery or was typed in as a URL.
+        ------------------------------------------------------------------- */
+        function handleFilePick(event, fieldKey) {
+            var file = event.target.files && event.target.files[0];
+            if (!file) return;
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var dataUrl = e.target.result;
+                document.getElementById('admin-f-' + fieldKey).value = dataUrl;
+                updateFilePreview(fieldKey, dataUrl, file.name);
+            };
+            reader.onerror = function() {
+                alert('Could not read that file. Please try a different file or paste a URL instead.');
+            };
+            reader.readAsDataURL(file);
+        }
+        function handleUrlInput(fieldKey) {
+            var val = document.getElementById('admin-f-' + fieldKey).value.trim();
+            if (val) {
+                updateFilePreview(fieldKey, val, val.split('/').pop());
+            } else {
+                clearFileField(fieldKey, true);
+            }
+        }
+        function updateFilePreview(fieldKey, src, label) {
+            var previewBox = document.getElementById('admin-preview-' + fieldKey);
+            var labelEl = document.getElementById('admin-preview-' + fieldKey + '-label');
+            previewBox.classList.add('show');
+            labelEl.textContent = label && label.length < 40 ? label : 'File selected';
+            if (fieldKey !== 'coapdf') {
+                var imgTag = document.getElementById('admin-preview-' + fieldKey + '-tag');
+                imgTag.src = src;
+                imgTag.onerror = function() { imgTag.style.opacity = '0.2'; };
+            }
+        }
+        function clearFileField(fieldKey, skipInputClear) {
+            if (!skipInputClear) {
+                document.getElementById('admin-f-' + fieldKey).value = '';
+            }
+            document.getElementById('admin-preview-' + fieldKey).classList.remove('show');
+        }
+
+        /* ---------- Add / Edit form ---------- */
+        function showAdminForm() {
+            document.getElementById('admin-form-wrap').classList.add('show');
+            document.getElementById('admin-form-wrap').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        function hideAdminForm() {
+            document.getElementById('admin-form-wrap').classList.remove('show');
+            document.getElementById('admin-product-form').reset();
+            document.getElementById('admin-edit-id').value = '';
+            document.getElementById('admin-form-title').textContent = 'Add New Product';
+            clearFileField('img', true);
+            clearFileField('coaimg', true);
+            clearFileField('coapdf', true);
+        }
+        function editAdminProduct(id) {
+            var products = getAdminProducts();
+            var p = products.find(function(x) { return x.id === id; });
+            if (!p) return;
+            document.getElementById('admin-edit-id').value = p.id;
+            document.getElementById('admin-f-name').value = p.name || '';
+            document.getElementById('admin-f-category').value = p.category || '';
+            document.getElementById('admin-f-lot').value = p.lot || '';
+            document.getElementById('admin-f-purity').value = p.purity || '';
+            document.getElementById('admin-f-img').value = p.img || '';
+            document.getElementById('admin-f-coaimg').value = p.coaImg || '';
+            document.getElementById('admin-f-coapdf').value = p.coaPdf || '';
+            document.getElementById('admin-f-badge').value = p.badge || '';
+            document.getElementById('admin-form-title').textContent = 'Edit Product';
+
+            if (p.img) updateFilePreview('img', p.img, p.img.startsWith('data:') ? 'Uploaded image' : p.img.split('/').pop());
+            else clearFileField('img', true);
+            if (p.coaImg) updateFilePreview('coaimg', p.coaImg, p.coaImg.startsWith('data:') ? 'Uploaded image' : p.coaImg.split('/').pop());
+            else clearFileField('coaimg', true);
+            if (p.coaPdf) updateFilePreview('coapdf', p.coaPdf, p.coaPdf.startsWith('data:') ? 'Uploaded PDF' : p.coaPdf.split('/').pop());
+            else clearFileField('coapdf', true);
+
+            showAdminForm();
+        }
+        function deleteAdminProduct(id) {
+            if (!confirm('Delete this product? This cannot be undone.')) return;
+            var products = getAdminProducts().filter(function(x) { return x.id !== id; });
+            setAdminProducts(products);
+            renderAdminTable();
+            renderLiveProductGrid();
+        }
+        function saveAdminProduct(e) {
+            e.preventDefault();
+            var id = document.getElementById('admin-edit-id').value;
+            var products = getAdminProducts();
+            var data = {
+                id: id || ('admin-' + Date.now()),
+                name: document.getElementById('admin-f-name').value.trim(),
+                category: document.getElementById('admin-f-category').value.trim(),
+                lot: document.getElementById('admin-f-lot').value.trim(),
+                purity: document.getElementById('admin-f-purity').value.trim(),
+                img: document.getElementById('admin-f-img').value.trim(),
+                coaImg: document.getElementById('admin-f-coaimg').value.trim(),
+                coaPdf: document.getElementById('admin-f-coapdf').value.trim(),
+                badge: document.getElementById('admin-f-badge').value.trim()
+            };
+            if (!data.name) return false;
+
+            if (id) {
+                var idx = products.findIndex(function(x) { return x.id === id; });
+                if (idx > -1) products[idx] = data;
+            } else {
+                products.push(data);
+            }
+            setAdminProducts(products);
+            renderAdminTable();
+            renderLiveProductGrid();
+            hideAdminForm();
+            return false;
+        }
+
+        /* ---------- Inject admin products into the live storefront grid ---------- */
+        function renderLiveProductGrid() {
+            var grid = document.getElementById('product-grid');
+            if (!grid) return;
+            grid.querySelectorAll('.product-card[data-admin-product="true"]').forEach(function(el) { el.remove(); });
+
+            var products = getAdminProducts();
+            products.forEach(function(p) {
+                var card = document.createElement('div');
+                card.className = 'product-card';
+                card.setAttribute('data-admin-product', 'true');
+                card.setAttribute('data-name', p.name);
+                card.setAttribute('data-lot', p.lot || '');
+                card.setAttribute('data-purity', p.purity || '');
+                card.setAttribute('data-img', p.img || '');
+                card.setAttribute('data-coa-img', p.coaImg || '');
+                card.setAttribute('data-coa-pdf', p.coaPdf || '');
+
+                var badgeHtml = p.badge ? '<div class="prod-badge">' + escapeHtml(p.badge) + '</div>' : '';
+                var categoryHtml = p.category ? '<div class="prod-category">' + escapeHtml(p.category) + '</div>' : '';
+                var waText = encodeURIComponent("I'm interested in " + p.name);
+
+                card.innerHTML =
+                    '<div class="prod-img-wrap">' +
+                    '<div class="prod-img-placeholder">' +
+                    '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>' +
+                    '<span>Product Image</span>' +
+                    '</div>' +
+                    '<img alt="' + escapeHtml(p.name) + '" loading="lazy" />' +
+                    badgeHtml + categoryHtml +
+                    '</div>' +
+                    '<div class="prod-body">' +
+                    '<div class="prod-name">' + escapeHtml(p.name) + '</div>' +
+                    '<div class="prod-purity">Purity: ' + escapeHtml(p.purity || '—') + ' | Lyophilized</div>' +
+                    '<div class="prod-actions">' +
+                    '<button class="btn-coa" onclick="openCOA(this.closest(\'.product-card\'))">📄 View COA</button>' +
+                    '<a class="btn-wa" href="https://wa.me/19175921215?text=' + waText + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.077-1.482l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.588-5.945c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Inquire</a>' +
+                    '</div>' +
+                    '</div>';
+
+                grid.appendChild(card);
+
+                var imgSrc = card.dataset.img;
+                var imgEl = card.querySelector('.prod-img-wrap img');
+                if (imgSrc) {
+                    imgEl.src = imgSrc;
+                    imgEl.onload = function() {
+                        imgEl.classList.add('loaded');
+                        var ph = card.querySelector('.prod-img-placeholder');
+                        if (ph) ph.style.display = 'none';
+                    };
+                    imgEl.onerror = function() { imgEl.style.display = 'none'; };
+                } else {
+                    imgEl.style.display = 'none';
+                }
+            });
+        }
+
+        // Render any saved admin products as soon as the page loads
+        document.addEventListener('DOMContentLoaded', renderLiveProductGrid);
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            renderLiveProductGrid();
+        }
+
+        // Close admin modals with Escape too
+        document.addEventListener('keydown', function(e) {
+            if (e.key !== 'Escape') return;
+            if (document.getElementById('admin-panel').classList.contains('open')) closeAdminPanel();
+            else if (document.getElementById('admin-login-modal').classList.contains('open')) closeAdminLogin();
+        });
+    </script>
+    <!-- ============================================================
+         ADMIN — LOGIN MODAL
+         Default credentials (change in the JS section below):
+           Username: admin
+           Password: peptiva2024
+         ============================================================ -->
+    <div id="admin-login-modal" role="dialog" aria-modal="true">
+        <div class="admin-login-box">
+            <button class="admin-modal-close" onclick="closeAdminLogin()" aria-label="Close">✕</button>
+            <div class="admin-login-title">🔒 Admin Login</div>
+            <p class="admin-login-sub">Restricted area — Peptiva Lord staff only.</p>
+            <div class="admin-error" id="admin-login-error">Invalid username or password.</div>
+            <form id="admin-login-form" onsubmit="return handleAdminLogin(event)">
+                <div class="admin-field">
+                    <label for="admin-username">Username</label>
+                    <input type="text" id="admin-username" autocomplete="username" required />
+                </div>
+                <div class="admin-field">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" autocomplete="current-password" required />
+                </div>
+                <button type="submit" class="btn-admin-submit">Log In</button>
+            </form>
+            <p class="admin-hint">Forgot your credentials? Contact the site owner directly.</p>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         ADMIN — DASHBOARD PANEL
+         Lets the logged-in admin add, edit, or delete products.
+         Image / COA image / COA PDF fields let the admin EITHER:
+           1. Tap "Choose from Gallery / Files" to pick a photo/PDF
+              straight from their phone or computer (converted to a
+              data URL and stored), OR
+           2. Paste a direct URL into the text field instead.
+         Products are stored in localStorage ("peptivaAdminProducts")
+         and merged live into the existing #product-grid.
+         ============================================================ -->
+    <div id="admin-panel" role="dialog" aria-modal="true">
+        <div class="admin-dialog">
+            <div class="admin-header">
+                <div class="admin-header-title">🛠️ Admin Dashboard — Product Manager</div>
+                <div class="admin-header-actions">
+                    <button class="btn-admin-add" onclick="showAdminForm()">+ Add Product</button>
+                    <button class="btn-admin-logout" onclick="adminLogout()">Log Out</button>
+                    <button class="admin-modal-close" onclick="closeAdminPanel()" aria-label="Close">✕</button>
+                </div>
+            </div>
+            <div class="admin-body">
+
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Lot #</th>
+                                <th>Purity</th>
+                                <th>Category</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-product-tbody">
+                            <!-- Rows injected by JS: renderAdminTable() -->
+                        </tbody>
+                    </table>
+                </div>
+                <p class="admin-empty-note">Products added here appear instantly on the live "Available Now" grid above and are saved in this browser's local storage.</p>
+
+                <!-- Add / Edit form -->
+                <div id="admin-form-wrap">
+                    <div class="admin-form-title" id="admin-form-title">Add New Product</div>
+                    <form id="admin-product-form" onsubmit="return saveAdminProduct(event)">
+                        <input type="hidden" id="admin-edit-id" value="" />
+                        <div class="admin-form-grid">
+                            <div class="admin-field">
+                                <label for="admin-f-name">Product Name *</label>
+                                <input type="text" id="admin-f-name" placeholder="e.g. Retatrutide 10mg" required />
+                            </div>
+                            <div class="admin-field">
+                                <label for="admin-f-category">Category</label>
+                                <input type="text" id="admin-f-category" placeholder="e.g. GLP-1 / Metabolic" />
+                            </div>
+                            <div class="admin-field">
+                                <label for="admin-f-lot">Lot Number</label>
+                                <input type="text" id="admin-f-lot" placeholder="e.g. PL-2024-0400" />
+                            </div>
+                            <div class="admin-field">
+                                <label for="admin-f-purity">Purity</label>
+                                <input type="text" id="admin-f-purity" placeholder="e.g. 99.5%" />
+                            </div>
+                        </div>
+
+                        <!-- Product image: gallery picker OR URL -->
+                        <div class="admin-field">
+                            <label>Product Image</label>
+                            <div class="admin-file-field">
+                                <div class="admin-file-row">
+                                    <label class="btn-file-pick">
+                                        📷 Choose from Gallery
+                                        <input type="file" accept="image/*" style="display:none" onchange="handleFilePick(event,'img')" />
+                                    </label>
+                                    <input type="text" id="admin-f-img" placeholder="or paste an image URL (images/yourproduct.jpg)" oninput="handleUrlInput('img')" />
+                                </div>
+                                <div class="admin-file-preview" id="admin-preview-img">
+                                    <img id="admin-preview-img-tag" src="" alt="" />
+                                    <span id="admin-preview-img-label">Selected</span>
+                                    <button type="button" class="admin-file-clear" onclick="clearFileField('img')">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COA image: gallery picker OR URL -->
+                        <div class="admin-field">
+                            <label>COA Image</label>
+                            <div class="admin-file-field">
+                                <div class="admin-file-row">
+                                    <label class="btn-file-pick">
+                                        📷 Choose from Gallery
+                                        <input type="file" accept="image/*" style="display:none" onchange="handleFilePick(event,'coaimg')" />
+                                    </label>
+                                    <input type="text" id="admin-f-coaimg" placeholder="or paste a COA image URL (coa/yourproduct.jpg)" oninput="handleUrlInput('coaimg')" />
+                                </div>
+                                <div class="admin-file-preview" id="admin-preview-coaimg">
+                                    <img id="admin-preview-coaimg-tag" src="" alt="" />
+                                    <span id="admin-preview-coaimg-label">Selected</span>
+                                    <button type="button" class="admin-file-clear" onclick="clearFileField('coaimg')">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COA PDF: file picker OR URL -->
+                        <div class="admin-field">
+                            <label>COA PDF</label>
+                            <div class="admin-file-field">
+                                <div class="admin-file-row">
+                                    <label class="btn-file-pick">
+                                        📄 Choose PDF File
+                                        <input type="file" accept="application/pdf" style="display:none" onchange="handleFilePick(event,'coapdf')" />
+                                    </label>
+                                    <input type="text" id="admin-f-coapdf" placeholder="or paste a COA PDF URL (pdfs/yourproduct.pdf)" oninput="handleUrlInput('coapdf')" />
+                                </div>
+                                <div class="admin-file-preview" id="admin-preview-coapdf">
+                                    <span class="pdf-chip">📄</span>
+                                    <span id="admin-preview-coapdf-label">Selected</span>
+                                    <button type="button" class="admin-file-clear" onclick="clearFileField('coapdf')">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="admin-field">
+                            <label for="admin-f-badge">Badge Text (optional)</label>
+                            <input type="text" id="admin-f-badge" placeholder="e.g. 🔥 Top Seller" />
+                        </div>
+
+                        <div class="admin-form-actions">
+                            <button type="submit" class="btn-form-save">Save Product</button>
+                            <button type="button" class="btn-form-cancel" onclick="hideAdminForm()">Cancel</button>
+                        </div>
+                        <p class="admin-form-note">Tap "Choose from Gallery" to pick a photo or PDF straight from your device, or paste a direct URL instead. Gallery picks are stored directly in this browser.</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
