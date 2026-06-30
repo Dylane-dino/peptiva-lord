@@ -55,7 +55,8 @@
         }
         
         html {
-            scroll-behavior: smooth
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
         
         body {
@@ -64,6 +65,15 @@
             font-family: 'Inter', sans-serif;
             font-size: 15px;
             line-height: 1.65;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+        
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
         }
         
         a {
@@ -73,7 +83,8 @@
         
         img {
             max-width: 100%;
-            display: block
+            display: block;
+            height: auto;
         }
         /* ── NAV ── */
         
@@ -1457,6 +1468,43 @@
             .theme-toggle {
                 display: flex
             }
+            .nav-inner {
+                padding: 0 16px;
+                height: 60px;
+            }
+            .logo {
+                font-size: 1.1rem;
+            }
+            .logo img {
+                height: 28px;
+            }
+            section {
+                padding: 60px 18px;
+            }
+            .hero {
+                padding: 100px 18px 60px;
+                min-height: auto;
+            }
+            .hero-btns {
+                width: 100%;
+            }
+            .hero-btns .btn {
+                flex: 1;
+                justify-content: center;
+                text-align: center;
+            }
+            .coa-inner,
+            .wholesale-inner,
+            .about-inner {
+                gap: 32px;
+            }
+            .modal-dialog {
+                max-height: 94vh;
+            }
+            .disclaimer-bar {
+                padding: 12px 16px;
+                font-size: .84rem;
+            }
         }
         
         @media(max-width:680px) {
@@ -1471,6 +1519,77 @@
                 min-width: unset;
                 width: 100%
             }
+            h1 {
+                font-size: clamp(2rem, 9vw, 2.8rem);
+                max-width: 100%;
+            }
+            .hero-sub {
+                font-size: .95rem;
+                max-width: 100%;
+            }
+            .hero-eyebrow {
+                font-size: .7rem;
+                padding: 5px 12px;
+            }
+            .section-title {
+                font-size: clamp(1.5rem, 6vw, 2rem);
+            }
+            .section-desc {
+                max-width: 100%;
+            }
+            .cat-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .prod-img-wrap {
+                padding-top: 72%;
+            }
+            .modal-header {
+                padding: 18px 18px 14px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .modal-body {
+                padding: 16px 18px;
+            }
+            .modal-footer {
+                padding: 14px 18px 18px;
+            }
+            .coa-data-row {
+                font-size: .8rem;
+            }
+            .wa-float {
+                width: 50px;
+                height: 50px;
+                bottom: 18px;
+                right: 18px;
+            }
+            .wa-float svg {
+                width: 24px;
+                height: 24px;
+            }
+            .admin-dialog {
+                max-width: 100%;
+                max-height: 95vh;
+                border-radius: 12px;
+            }
+            .admin-body {
+                padding: 16px 18px;
+            }
+            .admin-form-grid {
+                grid-template-columns: 1fr;
+            }
+            .admin-table {
+                min-width: 620px;
+                font-size: .8rem;
+            }
+            .contact-item {
+                flex-wrap: wrap;
+            }
+            .footer-col {
+                padding-top: 10px;
+            }
         }
         
         @media(max-width:480px) {
@@ -1484,11 +1603,57 @@
                 gap: 10px
             }
             .badge {
-                font-size: .75rem;
-                padding: 8px 13px
+                font-size: .7rem;
+                padding: 7px 11px
             }
             .stat-grid {
                 grid-template-columns: 1fr
+            }
+            .nav-inner {
+                padding: 0 14px;
+            }
+            .logo span {
+                display: none;
+            }
+            .hero-btns {
+                flex-direction: column;
+            }
+            .btn {
+                padding: 13px 22px;
+                font-size: .88rem;
+            }
+            .prod-name {
+                font-size: .95rem;
+            }
+            .prod-actions {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .footer-bottom>div:last-child {
+                text-align: left;
+                max-width: 100%;
+            }
+            section {
+                padding: 56px 14px;
+            }
+            .hero {
+                padding: 90px 14px 50px;
+            }
+            .disclaimer-bar {
+                padding: 10px 14px;
+                font-size: .78rem;
+                line-height: 1.5;
+            }
+            .faq-q,
+            .faq-a-inner {
+                font-size: .9rem;
+            }
+            .faq-q {
+                padding: 16px 14px;
             }
         }
         /* ============================================================
@@ -1772,6 +1937,54 @@
             color: var(--gray);
             margin-top: 6px;
             line-height: 1.5;
+        }
+        
+        .admin-upload-box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .admin-upload-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 8px;
+            background: rgba(201, 152, 42, .12);
+            border: 1px solid rgba(201, 152, 42, .28);
+            color: var(--gold-lt);
+            font-size: .82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        
+        .admin-upload-btn:hover {
+            background: rgba(201, 152, 42, .2);
+        }
+        
+        .admin-upload-box input[type="file"] {
+            display: none;
+        }
+        
+        .admin-upload-meta {
+            font-size: .72rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+        
+        .admin-upload-preview {
+            display: none;
+            max-height: 120px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, .1);
+            background: rgba(255, 255, 255, .04);
         }
         
         .admin-error {
@@ -2928,11 +3141,11 @@
      ============================================================ -->
     <script>
         /* ─────────────────────────────────────────────
-                                                                                                                                                                                                   1. LAZY-LOAD PRODUCT IMAGES
-                                                                                                                                                                                                   Each .product-card carries  data-img  with the
-                                                                                                                                                                                                   path to its product photo.  We set the <img>
-                                                                                                                                                                                                   src here and fade it in once it loads.
-                                                                                                                                                                                                   ───────────────────────────────────────────── */
+                                                                                                                                                                                                                                   1. LAZY-LOAD PRODUCT IMAGES
+                                                                                                                                                                                                                                   Each .product-card carries  data-img  with the
+                                                                                                                                                                                                                                   path to its product photo.  We set the <img>
+                                                                                                                                                                                                                                   src here and fade it in once it loads.
+                                                                                                                                                                                                                                   ───────────────────────────────────────────── */
         document.querySelectorAll('.product-card').forEach(function(card) {
             var imgSrc = card.dataset.img;
             var img = card.querySelector('.prod-img-wrap img');
@@ -3222,6 +3435,43 @@
             }
         }
 
+        function handleAdminImageUpload(fileInput, targetInput, previewEl, metaEl) {
+            var file = fileInput && fileInput.files && fileInput.files[0];
+            if (!file) return;
+            if (!file.type || !file.type.startsWith('image/')) {
+                if (metaEl) metaEl.textContent = 'Please choose an image file.';
+                return;
+            }
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var dataUrl = e.target.result;
+                if (targetInput) targetInput.value = dataUrl;
+                if (previewEl) {
+                    previewEl.src = dataUrl;
+                    previewEl.style.display = 'block';
+                }
+                if (metaEl) {
+                    metaEl.textContent = 'Selected: ' + file.name + ' (' + Math.round(file.size / 1024) + ' KB)';
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function bindAdminImageUploadInputs() {
+            var imgFile = document.getElementById('admin-f-img-file');
+            var coaFile = document.getElementById('admin-f-coaimg-file');
+            if (imgFile) {
+                imgFile.addEventListener('change', function() {
+                    handleAdminImageUpload(this, document.getElementById('admin-f-img'), document.getElementById('admin-f-img-preview'), document.getElementById('admin-f-img-meta'));
+                });
+            }
+            if (coaFile) {
+                coaFile.addEventListener('change', function() {
+                    handleAdminImageUpload(this, document.getElementById('admin-f-coaimg'), document.getElementById('admin-f-coaimg-preview'), document.getElementById('admin-f-coaimg-meta'));
+                });
+            }
+        }
+
         /* ---------- Login modal open/close ---------- */
         function openAdminLogin() {
             // If already logged in this session, skip straight to the dashboard
@@ -3366,6 +3616,12 @@
             document.getElementById('admin-f-img-picker').value = '';
             document.getElementById('admin-f-coaimg-picker').value = '';
             document.getElementById('admin-f-coapdf-picker').value = '';
+            document.getElementById('admin-f-img-file').value = '';
+            document.getElementById('admin-f-coaimg-file').value = '';
+            document.getElementById('admin-f-img-preview').style.display = 'none';
+            document.getElementById('admin-f-coaimg-preview').style.display = 'none';
+            document.getElementById('admin-f-img-meta').textContent = 'Tap to open your phone gallery or camera.';
+            document.getElementById('admin-f-coaimg-meta').textContent = 'Tap to open your phone gallery or camera.';
             document.getElementById('admin-form-title').textContent = 'Add New Product';
         }
 
@@ -3501,12 +3757,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             populateGalleryPickers();
             bindGalleryPickerEvents();
+            bindAdminImageUploadInputs();
             renderLiveProductGrid();
         });
         // In case DOMContentLoaded already fired (defensive)
         if (document.readyState === 'complete' || document.readyState === 'interactive') {
             populateGalleryPickers();
             bindGalleryPickerEvents();
+            bindAdminImageUploadInputs();
             renderLiveProductGrid();
         }
 
@@ -3606,15 +3864,27 @@
                             </div>
                             <div class="admin-field">
                                 <label for="admin-f-img">Product Image</label>
+                                <div class="admin-upload-box">
+                                    <label class="admin-upload-btn" for="admin-f-img-file">📷 Choose from gallery / camera</label>
+                                    <input type="file" id="admin-f-img-file" accept="image/*" capture="environment" />
+                                    <div class="admin-upload-meta" id="admin-f-img-meta">Tap to open your phone gallery or camera.</div>
+                                    <img class="admin-upload-preview" id="admin-f-img-preview" alt="Selected product preview" />
+                                </div>
                                 <select id="admin-f-img-picker"></select>
-                                <input type="text" id="admin-f-img" placeholder="images/yourproduct.jpg" />
-                                <div class="admin-picker-help">Choose a file from the image gallery or type a custom URL.</div>
+                                <input type="text" id="admin-f-img" placeholder="images/yourproduct.jpg or a data:image URL" />
+                                <div class="admin-picker-help">Use the camera/gallery button for a fresh photo, or pick from the built-in gallery list. You can also paste a URL if needed.</div>
                             </div>
                             <div class="admin-field">
                                 <label for="admin-f-coaimg">COA Image</label>
+                                <div class="admin-upload-box">
+                                    <label class="admin-upload-btn" for="admin-f-coaimg-file">📷 Choose from gallery / camera</label>
+                                    <input type="file" id="admin-f-coaimg-file" accept="image/*" capture="environment" />
+                                    <div class="admin-upload-meta" id="admin-f-coaimg-meta">Tap to open your phone gallery or camera.</div>
+                                    <img class="admin-upload-preview" id="admin-f-coaimg-preview" alt="Selected COA preview" />
+                                </div>
                                 <select id="admin-f-coaimg-picker"></select>
-                                <input type="text" id="admin-f-coaimg" placeholder="coa/yourproduct.jpg" />
-                                <div class="admin-picker-help">Choose a COA image from the gallery or type a custom URL.</div>
+                                <input type="text" id="admin-f-coaimg" placeholder="coa/yourproduct.jpg or a data:image URL" />
+                                <div class="admin-picker-help">Use the camera/gallery button for a fresh COA photo, or pick from the built-in gallery list. You can also paste a URL if needed.</div>
                             </div>
                             <div class="admin-field">
                                 <label for="admin-f-coapdf">COA PDF</label>
@@ -3631,7 +3901,7 @@
                             <button type="submit" class="btn-form-save">Save Product</button>
                             <button type="button" class="btn-form-cancel" onclick="hideAdminForm()">Cancel</button>
                         </div>
-                        <p class="admin-form-note">You can now choose files directly from the image, COA, and PDF galleries, or paste a custom URL if needed. Leave blank to use the placeholder.</p>
+                        <p class="admin-form-note">You can now upload a product or COA image directly from the phone gallery or camera, choose from the built-in gallery list, or paste a custom URL if needed. Leave blank to use the placeholder.</p>
                     </form>
                 </div>
 
